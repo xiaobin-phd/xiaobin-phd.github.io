@@ -1,0 +1,622 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>猪代谢相关基因注释 -
+    阿宾的BLOG</title>
+<link rel="shortcut icon" href="https://xiaobin-phd.github.io/favicon.ico" />
+<link
+  href="https://unpkg.com/remixicon@2.2.0/fonts/remixicon.css"
+  rel="stylesheet" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/animate.css@3.7.2/animate.min.css" />
+<link
+  rel="stylesheet"
+  href="https://xiaobin-phd.github.io/media/css/tailwind.css" />
+<link rel="stylesheet" href="https://xiaobin-phd.github.io/styles/main.css" />
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="猪代谢相关基因注释 -
+    阿宾的BLOG - Atom Feed"
+  href="https://xiaobin-phd.github.io/atom.xml" />
+
+
+
+    <meta name="description" content="1、参考基因组下载
+基因组选择：Genome assembly Sscrofa11.1 （官方参考基因组，杜洛克雌猪）
+wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003..." />
+    <meta
+      property="og:title"
+      content="猪代谢相关基因注释 - 阿宾的BLOG" />
+    <meta property="og:description" content="1、参考基因组下载
+基因组选择：Genome assembly Sscrofa11.1 （官方参考基因组，杜洛克雌猪）
+wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003..." />
+    <meta property="og:type" content="articles" />
+    <meta property="og:url" content="https://xiaobin-phd.github.io/post/zhu-dai-xie-xiang-guan-ji-yin-zhu-shi/" />
+    <meta
+      property="og:image"
+      content="https://xiaobin-phd.github.io/images/avatar.png" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="1200" />
+    <meta
+      name="twitter:title"
+      content="猪代谢相关基因注释 - 阿宾的BLOG" />
+    <meta name="twitter:description" content="1、参考基因组下载
+基因组选择：Genome assembly Sscrofa11.1 （官方参考基因组，杜洛克雌猪）
+wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003..." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://xiaobin-phd.github.io/post/zhu-dai-xie-xiang-guan-ji-yin-zhu-shi/" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/photoswipe@4.1.3/dist/photoswipe.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/photoswipe@4.1.3/dist/default-skin/default-skin.css" />
+
+     
+  </head>
+
+  <body>
+    <div class="antialiased flex flex-col min-h-screen" id="app">
+      <a
+        href="https://xiaobin-phd.github.io"
+        class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+        阿宾的BLOG
+      </a>
+      <div class="max-w-4xl w-full mx-auto">
+        <div
+          class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+          <h1
+            class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+            猪代谢相关基因注释
+          </h1>
+          
+          <div class="mb-8 flex flex-wrap">
+            <div class="text-gray-400 text-sm mr-4">
+              2024-09-09 · 13 min read
+            </div>
+            
+          </div>
+          <div class="markdown mb-8" v-pre><h3 id="1-参考基因组下载">1、参考基因组下载</h3>
+<p><strong>基因组选择：Genome assembly Sscrofa11.1 （官方参考基因组，杜洛克雌猪）</strong></p>
+<pre><code>wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003/025/GCF_000003025.6_Sscrofa11.1/GCF_000003025.6_Sscrofa11.1_genomic.fna.gz
+wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003/025/GCF_000003025.6_Sscrofa11.1/GCF_000003025.6_Sscrofa11.1_protein.faa.gz
+ 
+# MD5校验
+wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003/025/GCF_000003025.6_Sscrofa11.1/md5checksums.txt
+ 
+md5sum -c md5checksums.txt
+</code></pre>
+<h3 id="2-基因组注释">2、基因组注释</h3>
+<p><strong>uniprot注释 （包括下载，建库和注释三部分）</strong></p>
+<pre><code class="language-bash">wget -c https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
+gzip -d uniprot_sprot.fasta.gz
+
+makeblastdb -in ~/0_rawdata/database/uniprot/uniprot_sprot.fasta -dbtype prot -out ~/0_rawdata/database/uniprot/uni
+blastdbcmd -info -db  /home/xb/0_rawdata/database/uniprot/uni # 检查数据库构建是否正确
+
+nohup blastx -query /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_genomic.fna -db ~/0_rawdata/database/uniprot/uni -max_target_seqs 1 -outfmt 6 -evalue 1e-5 &gt; uniprot.out &amp;
+
+# 已放弃，速度慢且达不到想要的结果。
+jobs -l 
+kill -9 20239
+
+# 重新对faa文件进行注释
+diamond makedb --in uniprot_sprot.fasta -d uni
+
+nohup diamond blastp -d ~/0_rawdata/database/uniprot/uni.dmnd -q /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_protein.faa -o pig.uni.xml -f 5 --sensitive --max-target-seqs 20 -e 1e-5 --id 20 --tmpdir /dev/shm --index-chunks 1 -p 8 &amp;
+
+parsing_blast_result.pl --evalue 1e-5 --HSP-num 1 --out-hit-confidence --suject-annotation pig.uni.xml &gt; pig.uni.tab
+
+</code></pre>
+<p>根据参考文献方法，发现eggnog注释可能更切合我们的需求，能直接得出带有EC号的蛋白。</p>
+<p>软件安装和使用参考：https://www.yunbios.net/eggNOG.html （包括下载安装，数据库下载，比对）</p>
+<pre><code class="language-bash">conda create -n eggnog
+conda activate eggnog
+conda install -c bioconda -y eggnog-mapper
+
+wget -c http://eggnog6.embl.de/download/emapperdb-5.0.2/eggnog_proteins.dmnd.gz
+gzip -d eggnog_proteins.dmnd.gz   # 测试失败，得用软件提供的脚本下载数据库。
+
+# 首先要手动创建一个data文件夹，脚本默认不创建。
+mkdir -p /home/xb/miniconda3/envs/eggnog/lib/python3.12/site-packages/data
+
+download_eggnog_data.py #使用官方脚本下载数据库
+
+nohup emapper.py -i /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_protein.faa -o pig --cpu 4 --seed_ortholog_evalue 1e-5 --dmnd_db /home/xb/miniconda3/envs/eggnog/lib/python3.12/site-packages/data/eggnog_proteins.dmnd &amp;
+
+# 运行时间大概在30min，下载pig.emapper.annotations至本地，提取注释到含有EC号的蛋白（12359条），并提取序列。
+sort -n id.list |uniq &gt; rmdup.list   #去重复，虽然eggnog注释貌似不像blast一样有重复序列
+
+fasta_extract_subseqs_from_list.pl /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_protein.faa rmdup.list &gt; target.faa
+
+# 使用cd-hit去除重复序列，然后回比到基因组上。
+conda install -c bioconda cd-hit
+cd-hit -i target.faa -o target.0.95.faa -c 0.95   # 去重后剩余 5270 条
+
+mkdir blastx &amp;&amp; cd blastx
+makeblastdb -in ../target.0.95.faa -dbtype prot -out ./ec
+blastdbcmd -info -db ./ec
+
+nohup blastx -query /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_genomic.fna -db ./ec  -max_target_seqs 1 -outfmt 5 -evalue 1e-5 -num_threads 8 &gt; pig.out &amp;    # 无结果，转化成tab显示没有比对上的，因为分析时间太长，无法复现
+</code></pre>
+<h3 id="3-根据protein_id提取对应的gene_id新思路">3、根据protein_id提取对应的gene_id（新思路)</h3>
+<p><strong>查询资料，发现可以直接从gbff中提取gene_id，整理一个脚本测试该功能</strong>（我爱gpt！）</p>
+<pre><code class="language-python">from Bio import SeqIO
+
+def extract_gene_ids(gbff_file, protein_ids_file, output_file):
+    # 读取蛋白质ID列表
+    with open(protein_ids_file, 'r') as f:
+        protein_ids = [line.strip() for line in f.readlines()]
+
+    # 创建一个字典来存储蛋白质ID与基因ID的映射
+    protein_to_gene = {}
+
+    # 解析GBFF文件
+    for record in SeqIO.parse(gbff_file, &quot;genbank&quot;):
+        for feature in record.features:
+            if feature.type == &quot;CDS&quot;:
+                # 提取protein_id
+                if &quot;protein_id&quot; in feature.qualifiers:
+                    protein_id = feature.qualifiers[&quot;protein_id&quot;][0]
+                    if protein_id in protein_ids:
+                        # 提取GeneID
+                        gene_ids = [xref.split(&quot;:&quot;)[1] for xref in feature.qualifiers.get(&quot;db_xref&quot;, []) if xref.startswith(&quot;GeneID&quot;)]
+                        if gene_ids:
+                            protein_to_gene[protein_id] = gene_ids[0]  # 只取第一个GeneID
+
+    # 输出结果到文件
+    with open(output_file, 'w') as out_f:
+        out_f.write(&quot;Protein_ID\tGene_ID\n&quot;)
+        for protein_id in protein_ids:
+            gene_id = protein_to_gene.get(protein_id, &quot;Not found&quot;)
+            out_f.write(f&quot;{protein_id}\t{gene_id}\n&quot;)
+
+# 示例使用
+gbff_file = &quot;/data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_genomic.gbff&quot;          # 替换为你的GBFF文件路径
+protein_ids_file = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/rmdup.list&quot;  # 替换为包含蛋白质ID的txt文件路径
+output_file = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/extract_from_gbff/gene.id.txt&quot;     # 输出结果的文件路径
+
+extract_gene_ids(gbff_file, protein_ids_file, output_file)
+</code></pre>
+<pre><code class="language-bash"># 提取第二列的gene_id并去重
+cat gene.id.txt|cut -f2 &gt; id.list
+sort -n id.list |uniq &gt; rmdup.list   #包括 3691 条gene
+</code></pre>
+<p><strong>无效路径，仅做记录。</strong></p>
+<pre><code class="language-bash"># 再整理一个脚本，根据gene_id先从NCBI中批量提取对应的gene 序列文件（需要先获取API接口）。
+# gpt回答的无法实现
+
+# 要根据GeneID提取gene的fasta序列需要分为两步：将GeneID转换为相应的nucleotide ID或者RefSeq ID。GeneID本身通常在 `gene` 数据库中用于注释和搜索，但实际的序列数据在 `nucleotide` 数据库中。
+# gpt回复任然无效
+</code></pre>
+<p><strong>参考一个帖子找到灵感：<a href="https://blog.csdn.net/qq_65680034/article/details/136400958">如何从NCBI上的Gene数据库批量下载基因序列数据_ncbi批量下载基因序列-CSDN博客</a>   [官方指导文件](<a href="https://www.ncbi.nlm.nih.gov/datasets/docs/v2/languages/">Supported programming languages (nih.gov)</a>)</strong></p>
+<p><strong>实操过程如下：第一步，通过OpenAPI java libraries建立Build Python NCBI Datasets API v2alpha library</strong></p>
+<pre><code>#!/usr/bin/env bash  编写一个bash脚本，直接运行即可（安装路径为：/home/xb/3_opt/ncbi_api）。
+OUTPUT_DIR=&quot;python_lib&quot;
+ 
+wget https://www.ncbi.nlm.nih.gov/datasets/docs/v2/openapi3/openapi3.docs.yaml
+ 
+wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/7.2.0/openapi-generator-cli-7.2.0.jar -O openapi-generator-cli.jar
+ 
+java -jar openapi-generator-cli.jar generate -g python -i openapi3.docs.yaml --package-name &quot;ncbi.datasets.openapi&quot; --additional-properties=pythonAttrNoneIfUnset=true,projectName=&quot;ncbi-datasets-pylib&quot;
+</code></pre>
+<p><strong>这一步之后要输入：   <u>pip install .</u>   （非常重要，官方文档没有提到，但是不运行此步骤后面会报错）</strong></p>
+<p><strong>第二步，编写提取脚本gene_get_info.py</strong></p>
+<pre><code class="language-python">import sys
+import csv
+import io
+import os
+from typing import List
+from zipfile import ZipFile
+ 
+from ncbi.datasets.openapi import ApiClient as DatasetsApiClient
+from ncbi.datasets.openapi import ApiException as DatasetsApiException
+from ncbi.datasets.openapi import GeneApi as DatasetsGeneApi
+ 
+zipfile_name = &quot;gene.zip&quot;  #自定义下载的压缩包名称
+output_file_name = &quot;protein.faa&quot;  # 自定义输出的文件名称
+
+ 
+# 从CSV文件中读取基因ID并存储在列表中
+gene_ids_from_csv = []
+csv_file_path = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/extract_from_gbff/rmdup.list&quot;  # 基因ID的CSV文件路径
+ 
+with open(csv_file_path, newline='') as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+        gene_id = int(row[0])  # 基因ID在CSV文件的第二列
+        gene_ids_from_csv.append(gene_id)
+ 
+# 将基因ID列表转换为字符串格式，形如 &quot;[1, 2, 3, ...]&quot;
+gene_ids_string = str(gene_ids_from_csv)
+ 
+# 将字符串中的单引号替换为双引号，使其成为合法的Python列表表示形式
+gene_ids_string = gene_ids_string.replace(&quot;'&quot;, '&quot;')
+ 
+# 将字符串转换为Python列表
+gene_ids_list = eval(gene_ids_string)
+ 
+ 
+with DatasetsApiClient() as api_client:
+    gene_ids: List[int] = gene_ids_list
+    gene_api = DatasetsGeneApi(api_client)
+    try:
+        gene_dataset_download = gene_api.download_gene_package_without_preload_content(
+            gene_ids,
+            include_annotation_type=[&quot;FASTA_GENE&quot;, &quot;FASTA_PROTEIN&quot;],  #选择下载的数据格式
+        )
+ 
+        with open(zipfile_name, &quot;wb&quot;) as f:
+            f.write(gene_dataset_download.data)
+    except DatasetsApiException as e:
+        sys.exit(f&quot;Exception when calling GeneApi: {e}\n&quot;)
+ 
+ 
+try:
+    dataset_zip = ZipFile(zipfile_name)
+    zinfo = dataset_zip.getinfo(os.path.join(&quot;ncbi_dataset/data&quot;, &quot;protein.faa&quot;))
+    with io.TextIOWrapper(dataset_zip.open(zinfo), encoding=&quot;utf8&quot;) as fh:
+        with open(output_file_name, &quot;w&quot;, encoding=&quot;utf8&quot;) as output_file:
+            output_file.write(fh.read())
+except KeyError as e:
+    sys.exit(f&quot;File {output_file_name} not found in zipfile: {e}&quot;)
+</code></pre>
+<p><strong>第三步，运行程序。</strong></p>
+<pre><code class="language-bash">source ~/3_opt/cobra/bin/activate
+pip install python_lib
+
+chmod 755 gene_get_info.py
+python3 gene_get_info.py
+</code></pre>
+<p><strong>第四步，性能测试，受限于ncbi，一次性无法下载3691条gene，经测试发现单次最多只能下载700条（循环下载的话只能600），因此需要先分割gene_id_list，然后再提取gene 序列，脚本改进如下：</strong></p>
+<pre><code class="language-python"># 分割脚本，按照500个切割表格，形成多个小表格供后续使用。
+import csv
+import os
+
+def split_list(lst, n):
+    &quot;&quot;&quot;将列表分割成多个小列表，每个列表最多包含n个元素。&quot;&quot;&quot;
+    for i in range(0, len(lst), n):
+        yield lst[i:i + n]
+
+def save_split_files(gene_ids, batch_size, output_dir):
+    &quot;&quot;&quot;将基因ID列表分割并保存到多个CSV文件中。&quot;&quot;&quot;
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    for idx, batch in enumerate(split_list(gene_ids, batch_size), start=1):
+        file_path = os.path.join(output_dir, f'batch_{idx}.csv')
+        with open(file_path, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            for gene_id in batch:
+                writer.writerow([gene_id])
+
+if __name__ == &quot;__main__&quot;:
+    csv_file_path = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/extract_from_gbff/rmdup.list&quot;  # 输入CSV文件路径
+    output_dir = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/extract_from_gbff/split_files&quot;  # 输出目录
+    batch_size = 600  # 每个文件的基因ID数量
+
+    gene_ids_from_csv = []
+    with open(csv_file_path, newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            if len(row) &gt; 0:
+                gene_id = int(row[0])  # 基因ID在CSV文件的第一列
+                gene_ids_from_csv.append(gene_id)
+
+    save_split_files(gene_ids_from_csv, batch_size, output_dir)
+</code></pre>
+<p><strong>然后再访问NCBI API批量下载数据（压缩包形式，按gene_id命</strong>名）</p>
+<pre><code class="language-python"># 下载脚本，根据id下载gene序列，有的gene id在性染色体上，对应能查出两条基因序列。
+import sys
+import csv
+import io
+import os
+from typing import List
+from zipfile import ZipFile
+from ncbi.datasets.openapi import ApiClient as DatasetsApiClient
+from ncbi.datasets.openapi import ApiException as DatasetsApiException
+from ncbi.datasets.openapi import GeneApi as DatasetsGeneApi
+
+def download_and_extract_genes(gene_ids: List[int], zipfile_name: str, output_file_name: str):
+    &quot;&quot;&quot;下载基因数据并提取到文件中。&quot;&quot;&quot;
+    with DatasetsApiClient() as api_client:
+        gene_api = DatasetsGeneApi(api_client)
+        try:
+            gene_dataset_download = gene_api.download_gene_package_without_preload_content(
+                gene_ids,
+                include_annotation_type=[&quot;FASTA_GENE&quot;, &quot;FASTA_PROTEIN&quot;],  # 选择下载的数据格式
+            )
+
+            with open(zipfile_name, &quot;wb&quot;) as f:
+                f.write(gene_dataset_download.data)
+        except DatasetsApiException as e:
+            sys.exit(f&quot;Exception when calling GeneApi: {e}\n&quot;)
+
+    try:
+        with ZipFile(zipfile_name) as dataset_zip:
+            zinfo = dataset_zip.getinfo(os.path.join(&quot;ncbi_dataset/data&quot;, &quot;protein.faa&quot;))
+            with io.TextIOWrapper(dataset_zip.open(zinfo), encoding=&quot;utf8&quot;) as fh:
+                with open(output_file_name, &quot;a&quot;, encoding=&quot;utf8&quot;) as output_file:
+                    output_file.write(fh.read())
+    except KeyError as e:
+        sys.exit(f&quot;File {output_file_name} not found in zipfile: {e}&quot;)
+
+def process_csv_files(input_dir: str, output_file_name: str):
+    &quot;&quot;&quot;处理目录中的所有CSV文件并提取基因数据。&quot;&quot;&quot;
+    csv_files = [f for f in os.listdir(input_dir) if f.endswith('.csv')]
+    if not csv_files:
+        sys.exit(f&quot;No CSV files found in directory: {input_dir}&quot;)
+
+    # 确保输出文件存在
+    open(output_file_name, 'w').close()
+
+    for csv_file in csv_files:
+        csv_file_path = os.path.join(input_dir, csv_file)
+        with open(csv_file_path, newline='') as csvfile:
+            reader = csv.reader(csvfile)
+            gene_ids_from_csv = [int(row[0]) for row in reader if len(row) &gt; 0]
+        
+        # 使用 CSV 文件名作为唯一标识的一部分
+        zipfile_name = f&quot;gene_{os.path.splitext(csv_file)[0]}.zip&quot;
+        download_and_extract_genes(gene_ids_from_csv, zipfile_name, output_file_name)
+
+if __name__ == &quot;__main__&quot;:
+    input_dir = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/extract_from_gbff/split_files&quot;  # CSV文件所在目录
+    output_file_name = &quot;combined_protein.faa&quot;  # 合并后的输出文件
+
+    process_csv_files(input_dir, output_file_name)
+</code></pre>
+<p><strong>解压、重命名及合并fna文件</strong></p>
+<pre><code class="language-bash">#!/bin/bash   解压&amp;重命名
+
+# 确保目标文件夹存在
+mkdir -p gene_output
+
+# 遍历所有以 gene_batch_ 开头的 zip 文件
+for zip_file in gene_batch_*.zip; do
+    # 提取文件名（去掉扩展名）
+    base_name=$(basename &quot;$zip_file&quot; .zip)
+    
+    # 解压指定文件并重命名
+    unzip -j &quot;$zip_file&quot; ncbi_dataset/data/gene.fna -d ./gene_output/ &amp;&amp;
+    mv ./gene_output/gene.fna ./gene_output/${base_name}.fna
+done
+</code></pre>
+<pre><code class="language-bash">cd gene_output/
+
+cat *.fna &gt; output.fna
+seqtk seq -A output.fna | sort -u &gt; output.rmdup.fna
+
+grep &quot;&gt;&quot; output.rmdup.eggnog.fna |wc -l   # 最后得到3694条gene,结果文件为output.rmdup.eggnog.fna
+</code></pre>
+</div>
+          <!-- Share to Twitter, Weibo, Telegram -->
+          <div class="flex items-center">
+            <div class="mr-4 flex items-center">
+              <i class="ri-share-forward-line text-gray-500"></i>
+            </div>
+            <div
+              class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex"
+              @click="shareToTwitter">
+              <i class="ri-twitter-line"></i>
+            </div>
+            <div
+              class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex"
+              @click="shareToWeibo">
+              <i class="ri-weibo-line"></i>
+            </div>
+            <div
+              class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex"
+              @click="shareToTelegram">
+              <i class="ri-telegram-line"></i>
+            </div>
+          </div>
+        </div>
+
+          <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  The best way to predict the future is to create it！
+</footer>
+
+      </div>
+
+      <!-- TOC Container -->
+      <div
+        class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight"
+        @click="showToc = true">
+        <i class="ri-file-list-line"></i>
+      </div>
+
+      <div
+        class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast"
+        :class="{ '-mr-64': !showToc }">
+        <div class="flex mb-4 justify-end">
+          <div
+            class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast"
+            @click="showToc = false">
+            <i class="ri-close-line text-lg"></i>
+          </div>
+        </div>
+        <div class="post-toc-container"><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1-%E5%8F%82%E8%80%83%E5%9F%BA%E5%9B%A0%E7%BB%84%E4%B8%8B%E8%BD%BD">1、参考基因组下载</a></li>
+<li><a href="#2-%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B3%A8%E9%87%8A">2、基因组注释</a></li>
+<li><a href="#3-%E6%A0%B9%E6%8D%AEprotein_id%E6%8F%90%E5%8F%96%E5%AF%B9%E5%BA%94%E7%9A%84gene_id%E6%96%B0%E6%80%9D%E8%B7%AF">3、根据protein_id提取对应的gene_id（新思路)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      </div>
+
+      <!-- Back to top -->
+      <div
+        class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200"
+        @click="backToUp"
+        v-show="scrolled">
+        <i class="ri-arrow-up-line"></i>
+      </div>
+    </div>
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe.
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg"></div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter"></div>
+        <button
+          class="pswp__button pswp__button--close"
+          title="Close (Esc)"></button>
+        <button
+          class="pswp__button pswp__button--fs"
+          title="Toggle fullscreen"></button>
+        <button
+          class="pswp__button pswp__button--zoom"
+          title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+      <button
+        class="pswp__button pswp__button--arrow--left"
+        title="Previous (arrow left)"></button>
+      <button
+        class="pswp__button pswp__button--arrow--right"
+        title="Next (arrow right)"></button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="https://unpkg.com/vue@2.7.14/dist/vue.min.js"></script>
+    <script src="https://xiaobin-phd.github.io/media/scripts/main.js"></script>
+
+    <!-- Code Highlight -->
+    
+
+    <script src="https://unpkg.com/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+    <script src="https://unpkg.com/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+    <script>
+      //拿到预览框架，也就是上面的html代码
+      var pswpElement = document.querySelectorAll('.pswp')[0]
+      //定义图片数组变量
+      var imgitems
+      /**
+       * 用于显示预览界面
+       * @param index 图片数组下标
+       */
+      function viewImg(index) {
+        //其它选项这里不做过多阐述，详情见官网
+        var pswpoptions = {
+          index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+          bgOpacity: 0.7, // 背景透明度，0-1
+          maxSpreadZoom: 3, // 缩放级别，不要太大
+        }
+        //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+        var gallery = new PhotoSwipe(
+          pswpElement,
+          PhotoSwipeUI_Default,
+          imgitems,
+          pswpoptions
+        )
+        gallery.init()
+      }
+      /**
+       * 用于添加图片点击事件
+       * @param img 图片元素
+       * @param index 所属下标（在imgitems中的位置）
+       */
+      function addImgClick(img, index) {
+        img.onclick = function () {
+          viewImg(index)
+        }
+      }
+      /**
+       * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+       * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+       * 异步加载图片可在图片元素创建完成后调用此方法
+       */
+      function initImg() {
+        //重置图片数组
+        imgitems = []
+        //查找class:markdown 下的所有img元素并遍历
+        var imgs = document.querySelectorAll('.markdown img')
+        for (var i = 0; i < imgs.length; i++) {
+          var img = imgs[i]
+          //本站相册初始为loading图片，真实图片放在data-src
+          var ds = img.getAttribute('data-src')
+          //创建image对象，用于获取图片宽高
+          var imgtemp = new Image()
+          //判断是否存在data-src
+          if (ds != null && ds.length > 0) {
+            imgtemp.src = ds
+          } else {
+            imgtemp.src = img.src
+          }
+          //判断是否存在缓存
+          if (imgtemp.complete) {
+            var imgobj = {
+              src: imgtemp.src,
+              w: imgtemp.width,
+              h: imgtemp.height,
+            }
+            imgitems[i] = imgobj
+            addImgClick(img, i)
+          } else {
+            console.log('进来了2')
+            imgtemp.index = i
+            imgtemp.img = img
+            imgtemp.onload = function () {
+              var imgobj = {
+                src: this.src,
+                w: this.width,
+                h: this.height,
+              }
+              //不要使用push，因为onload前后顺序会不同
+              imgitems[this.index] = imgobj
+              //添加点击事件
+              addImgClick(this.img, this.index)
+            }
+          }
+        }
+      }
+      //初始化
+      initImg()
+    </script>
+     
+  </body>
+</html>

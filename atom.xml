@@ -1,0 +1,1617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://xiaobin-phd.github.io</id>
+    <title>阿宾的BLOG</title>
+    <updated>2024-11-03T01:33:16.097Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://xiaobin-phd.github.io"/>
+    <link rel="self" href="https://xiaobin-phd.github.io/atom.xml"/>
+    <logo>https://xiaobin-phd.github.io/images/avatar.png</logo>
+    <icon>https://xiaobin-phd.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, 阿宾的BLOG</rights>
+    <entry>
+        <title type="html"><![CDATA[1102会议总结]]></title>
+        <id>https://xiaobin-phd.github.io/post/1102-hui-yi-zong-jie/</id>
+        <link href="https://xiaobin-phd.github.io/post/1102-hui-yi-zong-jie/">
+        </link>
+        <updated>2024-11-03T01:21:23.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1-会议概括">1、会议概括</h3>
+<p>近期，实验室出现了工作态度不积极、工作执行不到位、个人奋斗意识不强以及试剂耗材浪费等问题。对此，申老师对实验室成员进行了批评，并明确提出了整改意见。要求各位成员积极开展自查自纠，务必采取有效措施，切实改变当前状况，以提升实验室的工作效率和责任意识。</p>
+<h3 id="2-整改内容">2、整改内容</h3>
+<h4 id="1-实验室记录本规范">1. 实验室记录本规范（★★★★★）</h4>
+<p>严格按照华中农业大学现行标准执行，要求内容真实、记录及时。同时设立小组负责人，每月对记录进行检查，以确保规范性和准确性。</p>
+<h4 id="2-上班考勤制度">2. 上班考勤制度（★★★★）</h4>
+<p>上午打卡时间为：8:00-12:00   下午打卡时间为：14:00-22:00</p>
+<h4 id="3-经费节约">3. 经费节约（★★★★）</h4>
+<ol>
+<li>
+<p>无意义的实验失败和重复是浪费的主要来源，需整理实验室常用实验的标准操作程序（SOP），指定专人负责，确保每项实验的规范执行。具体分工由薛丽兰统筹。</p>
+</li>
+<li>
+<p>测序和引物采购，需设立专人负责审核，同时做好留学生的实验管理工作。</p>
+</li>
+<li>
+<p>各小组定期召开总结会议，分析经费使用情况，以“该省省，该花花”的原则查漏补缺。</p>
+</li>
+<li>
+<p>个人需对照之前发布的整改措施，规范实验操作，养成节约经费的良好习惯。</p>
+</li>
+</ol>
+<h4 id="4-个人问题">4. 个人问题（★★★）</h4>
+<ol>
+<li>
+<p>明确目标，付诸实践，及时更正工作态度。</p>
+</li>
+<li>
+<p>对老师布置的任务，须及时落实并定期汇报，形成闭环管理。</p>
+</li>
+<li>
+<p>所有原始数据及结果文件第一时间备份至实验室服务器，养成良好的数据管理习惯。</p>
+</li>
+<li>
+<p>低年级学生需精读至少5篇相关文献，提升文献阅读能力。</p>
+</li>
+<li>
+<p>全员应养成撰写总结的习惯，如课题综述和实验心得，以提高文字表达能力。</p>
+</li>
+<li>
+<p>在大组会议汇报中，增加5分钟的新技术分享环节，包括技术基本原理、应用方式及个人思考等内容，促进个人创新能力的提升。</p>
+</li>
+<li>
+<p>实验室需要建设传承精神，高年级同学应负责指导低年级同学，包括实验教学和课题引导；低年级同学应积极参与，主动汇报，尊重师兄师姐的付出。双方都应换位思考，设身处地考虑对方的需求，以促进良好的合作氛围，提高团队凝聚力。</p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[代谢数据库拓展]]></title>
+        <id>https://xiaobin-phd.github.io/post/dai-xie-shu-ju-ku-tuo-zhan/</id>
+        <link href="https://xiaobin-phd.github.io/post/dai-xie-shu-ju-ku-tuo-zhan/">
+        </link>
+        <updated>2024-09-17T00:37:33.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="代谢相关数据库拓展">代谢相关数据库拓展</h3>
+<p><strong>目前已完成了初步注释，使用eggnog数据库，得到3964条基因（带有EC号）。</strong></p>
+<p><strong>后续工作分为两个步骤：1. 对初步结果进行手动验证，有的基因可能与代谢关系不那么直接，可适当删除。2. 查阅文献，拓展数据库进行注释，与初步结果进行比较分析，最终得到全面而严格的代谢相关基因数据集。</strong></p>
+<pre><code class="language-bash"># 常见数据库
+1. HMDB:人体代谢组数据库(HMDB)是一个免费的电子数据库，包含关于人体小分子代谢产物的详细信息，其应用领域包括代谢组学、临床化学、生物标志物的发现。该数据库包含114,026个代谢物记录，包括水溶性和脂溶性代谢物，以及被认为是丰富(&gt; 1 uM)或相对稀少(&lt; 1 nM)的代谢物。此外，还有5702个蛋白质序列与这些代谢产物相关。
+http://www.hmdb.ca/
+
+2. KEGG：东京基因及基因组百科全书，全书收录了一只各种生物的所有代谢物的代谢途径。支持对代谢网络的搜寻及代谢途径的映射。与代谢组学相关性大的几个模块包括：KEGG PATHWAY,KEGG DISEASA,KEGG COMPOUND,KEGG REACTION。
+https://www.genome.jp/kegg/ligand.html
+
+3. Reactome：REACTOME 是一个开源、开放访问、手动策划和同行评审的途径数据库。其中包含信号传导和代谢分子及其组织成生物途径和过程的关系。Reactome 数据模型的核心单元是反应。参与反应的实体（核酸、蛋白质、复合物、疫苗、抗癌疗法和小分子）形成生物相互作用网络，并分为通路。Reactome 中的生物通路示例包括经典中间代谢、信号传导、转录调控、细胞凋亡和疾病。（与KEGG互补）
+分析参考：https://blog.csdn.net/weixin_43839173/article/details/125318973
+https://reactome.org/
+# 0911更新：放弃该数据库，本地注释没有特别好的方式。
+</code></pre>
+<pre><code class="language-bash"># 其它数据库，参考系统生物学paper
+1. BiGG Models：是由美国University of California, San Diego 创立的基于代谢组学的系统生物学整合数据库。 该数据库的最大特点是含有各类模式生物的代谢谱图模型。用户可以直观的调取各种生物的整体代谢通路，也可以查看某个具体的生化反应。同时也可以进行代谢产物搜索。该数据库目前含有2766个代谢产物和3311条代谢生化反应。
+http://bigg.ucsd.edu/
+ref：https://doi.org/10.1371/journal. pcbi.1009870
+
+2. BRENDA：是一种专门用于酶和代谢酶的功能信息的数据库。它是一种在线资源，提供了大量的酶的相关信息，如酶的命名、分类、反应类型、催化物质、底物和产物等。Brenda数据库还包含了酶的催化机制、反应动力学、酶的结构和序列信息等。
+https://www.brenda-enzymes.org/
+doi:10.1038/nprot.2009.203
+
+# 240911更新，没必要一味地扩大数据库，追求方法学上的完美，因此这两个数据库被放弃，我们要尽早得到基因数据集开展实验。
+</code></pre>
+<p><u>初步挑选了6个数据库，探索其本地注释的可行性。</u></p>
+<p><strong>0911更新：确定eggnog，kegg和hmdb三个数据库用作分析。</strong></p>
+<h3 id="1-hmdb官网蛋白文件下载界面httpshmdbcadownloads">1. HMDB（官网蛋白文件下载界面：https://hmdb.ca/downloads）</h3>
+<pre><code class="language-bash"># sed -i 's/旧词/新词/g' 文件名 （fasta格式不规范，没有以&gt;开头）
+sed -i 's/HMDBP/&gt;HMDBP/g' hmdb.fasta
+
+# 发现下载的蛋白文件只有5629条序列，而官网上却显示8299条，已联系团队咨询此问题，暂时用下载文件分析。
+grep &quot;HMDB&quot; hmdb.fasta |wc -l
+5629
+
+# cd-hit检测该数据库的冗余度，发现95%相似度下，只有几百条冗余，不愧是人类代谢数据库！
+
+makeblastdb -in hmdb.fasta -dbtype prot -title hm -parse_seqids -out ./hm
+
+nohup blastp -query /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_protein.faa -db ~/0_rawdata/database/hmdb/hm -max_target_seqs 1 -outfmt 6 -evalue 1e-5 -num_threads 8 &gt; pig.hm.tab &amp;
+
+cat pig.hm.tab|cut -f1 &gt; id.list
+
+sort -n id.list|uniq &gt; rmdup.list
+
+#删除没意义的行 “Warning...”
+sed '/Warning/d' rmdup.list &gt; delete.rmdup.listq  #得到的蛋白序列多达38706条，而eggnog仅有12539条。
+
+可能要上双向最佳比对，否则得到的基因数太多了（测试发现单向比对最后得到gene序列12458条，而eggnog仅有3694条，更符合文献报道）
+</code></pre>
+<p><strong>双向最佳比对，用猪蛋白建库</strong></p>
+<pre><code class="language-bash">mkdir pig &amp;&amp; cd pig
+makeblastdb -in ../GCF_000003025.6_Sscrofa11.1_protein.faa -dbtype prot -title pig  -parse_seqids -out ./pig
+
+nohup blastp -query ~/0_rawdata/database/hmdb/hmdb.fasta -db /data/xb/1_pig_genome/pig/pig -max_target_seqs 1 -outfmt 6 -evalue 1e-5 -num_threads 8 &gt; hmdb.pig.tab &amp;
+
+sed -i '/Warning/d' hmdb.pig.tab
+</code></pre>
+<pre><code class="language-python"># 双向最佳比对
+import pandas as pd
+
+# 读取正向BLAST和反向BLAST的比对结果，指定文件路径
+forward_blast_path = '/home/xb/1_results/240906_pig_genome_annot/hmdb/pig.hm.tab'
+reverse_blast_path = '/home/xb/1_results/240906_pig_genome_annot/hmdb/rbh/hmdb.pig.tab'
+
+# 读取BLAST结果文件，假设为outfmt 6格式
+blast_forward = pd.read_csv(forward_blast_path, sep='\t', header=None)
+blast_reverse = pd.read_csv(reverse_blast_path, sep='\t', header=None)
+
+# 设置列名
+columns = ['qseqid', 'sseqid', 'pident', 'length', 'mismatch', 'gapopen', 'qstart', 'qend', 'sstart', 'send', 'evalue', 'bitscore']
+blast_forward.columns = columns
+blast_reverse.columns = columns
+
+# 筛选正向和反向的 query 和 subject 组合，并确保唯一性
+best_hits_forward = blast_forward[['qseqid', 'sseqid']].drop_duplicates()
+best_hits_reverse = blast_reverse[['sseqid', 'qseqid']].drop_duplicates()
+
+# 找到双向最佳比对
+rbh = pd.merge(best_hits_forward, best_hits_reverse, left_on=['qseqid', 'sseqid'], right_on=['sseqid', 'qseqid'])
+
+# 保存结果为文件，指定保存路径
+output_path = '/home/xb/1_results/240906_pig_genome_annot/hmdb/rbh/rbh.tab'
+rbh.to_csv(output_path, sep='\t', index=False)
+</code></pre>
+<p><strong>根据蛋白ID从GBFF中提取Gene_id</strong></p>
+<pre><code class="language-python">from Bio import SeqIO
+
+def extract_gene_ids(gbff_file, protein_ids_file, output_file):
+    # 读取蛋白质ID列表
+    with open(protein_ids_file, 'r') as f:
+        protein_ids = [line.strip() for line in f.readlines()]
+
+    # 创建一个字典来存储蛋白质ID与基因ID的映射
+    protein_to_gene = {}
+
+    # 解析GBFF文件
+    for record in SeqIO.parse(gbff_file, &quot;genbank&quot;):
+        for feature in record.features:
+            if feature.type == &quot;CDS&quot;:
+                # 提取protein_id
+                if &quot;protein_id&quot; in feature.qualifiers:
+                    protein_id = feature.qualifiers[&quot;protein_id&quot;][0]
+                    if protein_id in protein_ids:
+                        # 提取GeneID
+                        gene_ids = [xref.split(&quot;:&quot;)[1] for xref in feature.qualifiers.get(&quot;db_xref&quot;, []) if xref.startswith(&quot;GeneID&quot;)]
+                        if gene_ids:
+                            protein_to_gene[protein_id] = gene_ids[0]  # 只取第一个GeneID
+
+    # 输出结果到文件
+    with open(output_file, 'w') as out_f:
+        out_f.write(&quot;Protein_ID\tGene_ID\n&quot;)
+        for protein_id in protein_ids:
+            gene_id = protein_to_gene.get(protein_id, &quot;Not found&quot;)
+            out_f.write(f&quot;{protein_id}\t{gene_id}\n&quot;)
+
+# 示例使用
+gbff_file = &quot;/data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_genomic.gbff&quot;          # 替换为你的GBFF文件路径
+protein_ids_file = &quot;/home/xb/1_results/240906_pig_genome_annot/hmdb/rbh/rbh.list&quot;  # 替换为包含蛋白质ID的txt文件路径
+output_file = &quot;/home/xb/1_results/240906_pig_genome_annot/hmdb/extract_from_gbff/gene.id.txt&quot;     # 输出结果的文件路径
+
+extract_gene_ids(gbff_file, protein_ids_file, output_file)
+</code></pre>
+<pre><code class="language-bash"># 提取第二列的gene_id并去重
+cat gene.id.txt|cut -f2 &gt; id.list
+sort -n id.list |uniq &gt; rmdup.gene.list  # 最终结果4930条gene
+
+# 0911测试，将猪蛋白fasta进行cd-hit 95%的聚类后，蛋白数量从63575减少到28102条，重新进行双向最佳比对，结果发现得到的蛋白数4929条，和不聚类相差无几，说明聚类不仅可以减少资源浪费，对结果影响也不大。
+
+# 0913测试，将置信值设为1e-10，得到蛋白数为4948条，和1e-5（4953条）差别不大。
+</code></pre>
+<pre><code class="language-bash">import pandas as pd
+
+# 读取两个表格文件
+table1 = pd.read_csv('/home/xb/1_results/240906_pig_genome_annot/eggnog/extract_from_gbff/rmdup.list', header=None)
+table2 = pd.read_csv('/home/xb/1_results/240906_pig_genome_annot/hmdb/extract_from_gbff/rmdup.gene.list', header=None)
+
+# 重命名列名为 'ID'
+table1.columns = ['ID']
+table2.columns = ['ID']
+
+# 表1特有内容
+unique_table1 = table1[~table1['ID'].isin(table2['ID'])]
+
+# 表2特有内容
+unique_table2 = table2[~table2['ID'].isin(table1['ID'])]
+
+# 共有内容
+common = table1[table1['ID'].isin(table2['ID'])]
+
+# 确保目标文件夹存在
+import os
+output_folder = '/home/xb/1_results/240906_pig_genome_annot/diff_compare/gene'
+os.makedirs(output_folder, exist_ok=True)
+
+# 将结果保存为文件
+unique_table1.to_csv(f'{output_folder}/unique_table1.csv', index=False, header=False)
+unique_table2.to_csv(f'{output_folder}/unique_table2.csv', index=False, header=False)
+common.to_csv(f'{output_folder}/common.csv', index=False, header=False)
+</code></pre>
+<p><strong>eggnog注释得到3691条gene id，hmdb得到4930条gene id，eggnog特有1130条，hmdb特有2369条，共有2561条。</strong></p>
+<p><strong>切割gene id，从ncbi中批量下载gene序列</strong></p>
+<pre><code class="language-python"># 分割脚本，按照500个切割表格，形成多个小表格供后续使用。
+import csv
+import os
+
+def split_list(lst, n):
+    &quot;&quot;&quot;将列表分割成多个小列表，每个列表最多包含n个元素。&quot;&quot;&quot;
+    for i in range(0, len(lst), n):
+        yield lst[i:i + n]
+
+def save_split_files(gene_ids, batch_size, output_dir):
+    &quot;&quot;&quot;将基因ID列表分割并保存到多个CSV文件中。&quot;&quot;&quot;
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    for idx, batch in enumerate(split_list(gene_ids, batch_size), start=1):
+        file_path = os.path.join(output_dir, f'batch_{idx}.csv')
+        with open(file_path, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            for gene_id in batch:
+                writer.writerow([gene_id])
+
+if __name__ == &quot;__main__&quot;:
+    csv_file_path = &quot;/home/xb/1_results/240906_pig_genome_annot/hmdb/extract_from_gbff/rmdup.gene.list&quot;  # 输入CSV文件路径
+    output_dir = &quot;/home/xb/1_results/240906_pig_genome_annot/hmdb/extract_from_gbff/split_files&quot;  # 输出目录
+    batch_size = 600  # 每个文件的基因ID数量
+
+    gene_ids_from_csv = []
+    with open(csv_file_path, newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            if len(row) &gt; 0:
+                gene_id = int(row[0])  # 基因ID在CSV文件的第一列
+                gene_ids_from_csv.append(gene_id)
+
+    save_split_files(gene_ids_from_csv, batch_size, output_dir)
+</code></pre>
+<pre><code class="language-python"># 下载脚本，根据id下载gene序列，有的gene id在性染色体上，对应能查出两条基因序列。
+import sys
+import csv
+import io
+import os
+from typing import List
+from zipfile import ZipFile
+from ncbi.datasets.openapi import ApiClient as DatasetsApiClient
+from ncbi.datasets.openapi import ApiException as DatasetsApiException
+from ncbi.datasets.openapi import GeneApi as DatasetsGeneApi
+
+def download_and_extract_genes(gene_ids: List[int], zipfile_name: str, output_file_name: str):
+    &quot;&quot;&quot;下载基因数据并提取到文件中。&quot;&quot;&quot;
+    with DatasetsApiClient() as api_client:
+        gene_api = DatasetsGeneApi(api_client)
+        try:
+            gene_dataset_download = gene_api.download_gene_package_without_preload_content(
+                gene_ids,
+                include_annotation_type=[&quot;FASTA_GENE&quot;, &quot;FASTA_PROTEIN&quot;],  # 选择下载的数据格式
+            )
+
+            with open(zipfile_name, &quot;wb&quot;) as f:
+                f.write(gene_dataset_download.data)
+        except DatasetsApiException as e:
+            sys.exit(f&quot;Exception when calling GeneApi: {e}\n&quot;)
+
+    try:
+        with ZipFile(zipfile_name) as dataset_zip:
+            zinfo = dataset_zip.getinfo(os.path.join(&quot;ncbi_dataset/data&quot;, &quot;protein.faa&quot;))
+            with io.TextIOWrapper(dataset_zip.open(zinfo), encoding=&quot;utf8&quot;) as fh:
+                with open(output_file_name, &quot;a&quot;, encoding=&quot;utf8&quot;) as output_file:
+                    output_file.write(fh.read())
+    except KeyError as e:
+        sys.exit(f&quot;File {output_file_name} not found in zipfile: {e}&quot;)
+
+def process_csv_files(input_dir: str, output_file_name: str):
+    &quot;&quot;&quot;处理目录中的所有CSV文件并提取基因数据。&quot;&quot;&quot;
+    csv_files = [f for f in os.listdir(input_dir) if f.endswith('.csv')]
+    if not csv_files:
+        sys.exit(f&quot;No CSV files found in directory: {input_dir}&quot;)
+
+    # 确保输出文件存在
+    open(output_file_name, 'w').close()
+
+    for csv_file in csv_files:
+        csv_file_path = os.path.join(input_dir, csv_file)
+        with open(csv_file_path, newline='') as csvfile:
+            reader = csv.reader(csvfile)
+            gene_ids_from_csv = [int(row[0]) for row in reader if len(row) &gt; 0]
+        
+        # 使用 CSV 文件名作为唯一标识的一部分
+        zipfile_name = f&quot;gene_{os.path.splitext(csv_file)[0]}.zip&quot;
+        download_and_extract_genes(gene_ids_from_csv, zipfile_name, output_file_name)
+
+if __name__ == &quot;__main__&quot;:
+    input_dir = &quot;/home/xb/1_results/240906_pig_genome_annot/hmdb/extract_from_gbff/split_files&quot;  # CSV文件所在目录
+    output_file_name = &quot;combined_protein.faa&quot;  # 合并后的输出文件
+
+    process_csv_files(input_dir, output_file_name)
+</code></pre>
+<p><strong>解压、重命名及合并fna文件</strong></p>
+<pre><code class="language-bash">#!/bin/bash   解压&amp;重命名
+
+# 确保目标文件夹存在
+mkdir -p gene_output
+
+# 遍历所有以 gene_batch_ 开头的 zip 文件
+for zip_file in gene_batch_*.zip; do
+    # 提取文件名（去掉扩展名）
+    base_name=$(basename &quot;$zip_file&quot; .zip)
+    
+    # 解压指定文件并重命名
+    unzip -j &quot;$zip_file&quot; ncbi_dataset/data/gene.fna -d ./gene_output/ &amp;&amp;
+    mv ./gene_output/gene.fna ./gene_output/${base_name}.fna
+done
+</code></pre>
+<pre><code class="language-bash">cd gene_output/
+
+cat *.fna &gt; output.fna
+seqtk seq -A output.fna | sort -u &gt; output.rmdup.hmdb.fna
+
+grep &quot;&gt;&quot; output.rmdup.hmdb.fna |wc -l   # 最后得到4934条gene,结果文件为output.rmdup.hmdb.fna
+</code></pre>
+<h3 id="2-kegg本地注释">2. KEGG本地注释</h3>
+<p><strong>参考：[比较转录组分析（四）—— 组装的 GO 及 KEGG 注释 | Juse's Blog (biojuse.com)](https://biojuse.com/2022/11/28/比较转录组分析（四）—— 组装的注释/)</strong></p>
+<p><strong>数据库下载：</strong></p>
+<pre><code class="language-bash">mkdir -p /home/xb/0_rawdata/database/kegg/db
+cd /home/xb/0_rawdata/database/kegg/db
+
+wget -c ftp://ftp.genome.jp/pub/db/kofam/ko_list.gz 
+wget -c ftp://ftp.genome.jp/pub/db/kofam/profiles.tar.gz
+wget -c ftp://ftp.genome.jp/pub/db/kofam/README 
+db_Version=`grep &quot;Last update: &quot; README|perl -p -e 's/Last update: //g;s/\//_/g'`
+gunzip ko_list.gz 
+tar xvzf profiles.tar.gz
+touch db_Version_${db_Version}
+
+cd ..
+wget -c ftp://ftp.genome.jp/pub/tools/kofam_scan/kofam_scan-1.3.0.tar.gz
+tar  -zxvf kofam_scan-1.3.0.tar.gz
+</code></pre>
+<p><strong>安装依赖</strong></p>
+<pre><code class="language-bash">conda create -n kofam -y -c bioconda ruby hmmer parallel
+conda activate kofam
+
+cd kofam_scan-1.3.0
+cp config-template.yml config.yml
+vim config.yml
+
+# 内容如下：
+# Path to your KO-HMM database
+# A database can be a .hmm file, a .hal file or a directory in which
+# .hmm files are. Omit the extension if it is .hal or .hmm file
+profile: /home/xb/0_rawdata/database/kegg/db/profiles
+
+# Path to the KO list file
+ko_list: /home/xb/0_rawdata/database/kegg/db/ko_list
+
+  # Path to an executable file of hmmsearch
+# You do not have to set this if it is in your $PATH
+hmmsearch: /home/xb/miniconda3/envs/kofam/bin/hmmsearch
+
+# Path to an executable file of GNU parallel
+# You do not have to set this if it is in your $PATH
+parallel: /home/xb/miniconda3/envs/kofam/bin/parallel
+
+# Number of hmmsearch processes to be run parallelly
+cpu: 8
+</code></pre>
+<p><strong>运行命令</strong></p>
+<pre><code class="language-bash">mkdir -p /home/xb/1_results/240906_pig_genome_annot/kegg
+cd /home/xb/1_results/240906_pig_genome_annot/kegg
+ln -s /home/xb/0_rawdata/database/kegg/kofam_scan-1.3.0/exec_annotation kofamscan
+
+./kofamscan -o group_rep.kofam.out --cpu 8 --format mapper  -e 1e-5 /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_protein.faa   #测试软件可行性，报错提示Ruby版本太低。
+
+conda install ruby=2.7   #升级至2.7后可运行
+
+nohup ./kofamscan -o group_rep.kofam.out --cpu 8 --format mapper -e 1e-5 /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_protein.faa &amp;
+</code></pre>
+<p><strong>使用 Kofamscan 得到 KO 注释文件后，可以使用对应物种的 pathway-KO 文件给注释相应的 pathway，编写脚本pathway.py</strong></p>
+<pre><code>#!/usr/bin/env python3
+
+import os
+import sys
+import re
+
+
+def pathway_map(sp=&quot;ko&quot;):
+    &quot;&quot;&quot;
+    :param sp:The default is'ko', which means downloading 'ko00001.keg'
+           https://www.genome.jp/kegg-bin/download_htext?htext=ko00001.keg&amp;format=htext&amp;filedir=
+    :return: K_ko_map
+    &quot;&quot;&quot;
+    #url = r&quot;https://www.genome.jp/kegg-bin/download_htext?htext=asa00001.keg&amp;format=htext&amp;filedir=&quot;
+    keg_file = sp +&quot;00001.keg&quot;
+    cmd = r&quot;wget 'http://www.kegg.jp/kegg-bin/download_htext?htext=&quot; +sp + &quot;00001.keg&amp;format=htext&amp;filedir=' -O &quot; + keg_file
+    if not os.path.exists(keg_file):
+        try:
+            res = os.system(cmd)
+            # 使用system模块执行linux命令时，如果执行的命令没有返回值res的值是256
+            # 如果执行的命令有返回值且成功执行，返回值是0
+        except:
+            print(&quot;Failed to run\n&quot; + str(cmd) +&quot;\nplease check the network&quot;)
+            sys.exit()
+    in_keg = open(keg_file, &quot;r&quot;).readlines()
+    K_ko_map = {}
+    for line in in_keg:
+        if line.startswith(&quot;A&quot;):
+            # 'A09100 Metabolism'
+            level_1 = re.match(r'^A(.+?)\s(.+)\n', line).group(2)
+        elif line.startswith(&quot;B &quot;):
+            # B  09102 Energy metabolism
+            level_2 = re.match(r'^B\s*(.+?)\s(.*)\n', line).group(2)
+        elif line.startswith(&quot;C &quot;):
+            # 'C    00010 Glycolysis / Gluconeogenesis [PATH:asa00010]' or 'C    99980 Enzymes with EC numbers'
+            pathway_info = re.match(r'^C\s*(\d+?)\s(.*)\n', line)
+            pathway_id = &quot;ko&quot; + str(pathway_info.group(1))
+            pathway_desc = str(pathway_info.group(2)).split(&quot; [&quot;)[0]
+            pathway_info_list = [pathway_desc, level_1, level_2]
+
+        elif line.startswith(&quot;D &quot;)   and in_keg[0] == '+D\tGENES\tKO\n':
+            # 'D      ASA_1323 glk; glucokinase\tK00845 glk; glucokinase [EC:2.7.1.2]\n'
+            K_info = re.match(r'^D\s*.*\t(K\d+?)\s(.*)\n', line)
+            K_id = K_info.group(1)
+            K_desc = K_info.group(2)
+            K_info_list = [K_desc, pathway_id, pathway_desc, level_1, level_2]
+            if K_id not in K_ko_map.keys():
+                K_ko_map[K_id] = [K_info_list]
+            else:
+                l_tem = K_ko_map[K_id]
+                if K_info_list not  in  l_tem:
+                    l_tem.append(K_info_list)
+                    K_ko_map[K_id] = l_tem
+
+        elif line.startswith(&quot;D &quot;)   and in_keg[0] == '+D\tKO\n':
+            # 'D      K00844  HK; hexokinase [EC:2.7.1.1]'
+            K_info = re.match(r'^D\s*(K\d+?)\s(.*)\n', line)
+            K_id = K_info.group(1)
+            K_desc = K_info.group(2)
+            K_info_list = [K_desc, pathway_id, pathway_desc, level_1, level_2]
+            if K_id not in K_ko_map.keys():
+                K_ko_map[K_id] = [K_info_list]
+            else:
+                l_tem = K_ko_map[K_id]
+                if K_info_list not in l_tem:
+                    l_tem.append(K_info_list)
+                    K_ko_map[K_id] = l_tem
+    return (K_ko_map)
+
+def ko_class_map():
+    # https://www.genome.jp/kegg-bin/download_htext?htext=br08901.keg&amp;format=htext&amp;filedir=  htext
+    # https://www.genome.jp/kegg-bin/download_htext?htext=br08901.keg&amp;format=json&amp;filedir=  josn
+    # https://www.genome.jp/dbget-bin/get_linkdb?-t+orthology+path:ko00040
+    cmd = r&quot;wget 'https://www.genome.jp/kegg-bin/download_htext?htext=br08901.keg&amp;format=htext&amp;filedir=' -O br08901.keg&quot;
+    if not os.path.exists(&quot;br08901.keg&quot;):
+        try:
+            res = os.system(cmd)
+            # 使用system模块执行linux命令时，如果执行的命令没有返回值res的值是256
+            # 如果执行的命令有返回值且成功执行，返回值是0
+        except:
+            print(&quot;Failed to run\n&quot; + str(cmd) + &quot;\nplease check the network&quot;)
+            sys.exit()
+    in_keg = open(&quot;br08901.keg&quot;, &quot;r&quot;).readlines()
+    pathway_map=open(&quot;kegg_pathway_map.xls&quot;,&quot;w+&quot;)
+    ko_class = {}
+    for line in in_keg:
+        if line.startswith(&quot;A&quot;):
+            # 'A09100 Metabolism'
+            level_1 = re.match(r'^A&lt;b&gt;(.*)&lt;/b&gt;\n', line).group(1)
+        elif line.startswith(&quot;B &quot;):
+            # B  09102 Energy metabolism
+            level_2 = re.match(r'^B\s*(.*)\n', line).group(1)
+        elif line.startswith(&quot;C &quot;):
+            # 'C    00010 Glycolysis / Gluconeogenesis [PATH:asa00010]' or 'C    99980 Enzymes with EC numbers'
+            pathway_info = re.match(r'^C\s*(\d+?)\s(.*)\n', line)
+            pathway_id = &quot;ko&quot; + str(pathway_info.group(1))
+            pathway_desc = str(pathway_info.group(2)).split(&quot; [&quot;)[0]
+            line_out = pathway_id + &quot;\t&quot; + pathway_desc + &quot;\t&quot; + level_1 + &quot;\t&quot; +level_2 + &quot;\t&quot;
+            pathway_map.write(line_out + &quot;\n&quot;)
+            pathway_info_list = [pathway_desc, level_1, level_2]
+            if pathway_id not in ko_class.keys():
+                ko_class[pathway_id] = pathway_info_list
+    return(ko_class)
+
+
+def K_list_Parser(K_list,sp=&quot;ko&quot;):
+    file_name = os.path.split(K_list)[1].rsplit(&quot;.&quot;,1)[0]
+    out_kegg_anno = file_name + &quot;.kegg_anno.xls&quot;
+    not_in_pathway_map = file_name + &quot;K_codes_not_in_pathway_map.list&quot;
+    out_kegg_pathway = file_name + &quot;.kegg_pathway_stata.xls&quot;
+    anno_f = open(out_kegg_anno, &quot;w+&quot;)
+    not_in_pathway_f = open(not_in_pathway_map, &quot;w+&quot;)
+    pathway_f = open(out_kegg_pathway, &quot;w+&quot;)
+    anno_f.write(&quot;gene_id\tK_id\tK_desc\tpathway_id\tpathway_desc\tlevel_1\tlevel_2\n&quot;)
+    pathway_f.write(&quot;Pathway\tGenes annoted in term\tPathway ID\tLevel1\tLevel2\tKOs\tGenes\n&quot;)
+
+    map_kegg = pathway_map(sp)
+    ko_class = ko_class_map()
+    infile_list = open(K_list, &quot;r&quot;).readlines()
+    infile_list = [ term.rstrip(&quot;\n&quot;).split(&quot;\t&quot;) for term in infile_list ]
+
+    k_num_dict = {}
+    line_out_tem = &quot;&quot;
+    for line in infile_list:
+        gene_id = line[0]
+        if len(line) == 2:
+            K_id = line[1]
+            if K_id in map_kegg.keys():
+                pathway_info = map_kegg[K_id]
+                for K_info_list in pathway_info :
+                    # K_desc, pathway_id, pathway_desc, level_1, level_2
+                    string = &quot;\t&quot;
+                    line_out =gene_id + &quot;\t&quot; + K_id + &quot;\t&quot; +string.join(K_info_list) + &quot;\n&quot;
+                    if line_out != line_out_tem:
+                        anno_f.write(line_out)
+                        line_out_tem = line_out
+            else:
+                not_in_pathway_f.write(gene_id + &quot;\t&quot; + K_id + &quot;\n&quot;)
+                line_out = gene_id + &quot;\t&quot; * 6 + &quot;\n&quot;
+                if line_out != line_out_tem:
+                    anno_f.write(line_out)
+                    line_out_tem = line_out
+            # k_id 2 gene_id list
+            if K_id not in k_num_dict.keys():
+                k_num_dict[K_id] = gene_id
+            else:
+                k_num_dict[K_id] = k_num_dict[K_id] + ';' + gene_id
+        else:
+            anno_f.write(gene_id +&quot;\t&quot;*6 + &quot;\n&quot;)
+
+    ko_sample_dict = {}
+    for K_id in list(k_num_dict.keys()):
+        if K_id not in list(map_kegg.keys()):
+            continue
+        ko_num_sample = [ term[1] for term in  map_kegg[K_id]]
+        for ko in ko_num_sample:
+            if ko not in list(ko_sample_dict.keys()):
+                ko_sample_dict[ko] = K_id
+            else:
+                ko_sample_dict[ko] = ko_sample_dict[ko] + ';' + K_id
+
+    for ko in [item for item in list(ko_sample_dict.keys())  if  item  in list(ko_class.keys()) ] :
+        pathway = ko_class[ko][0]
+        level1 = ko_class[ko][1]
+        level2 = ko_class[ko][2]
+        k_num_list = ko_sample_dict[ko].split(';')
+        gene_str = ''
+
+        for k_num_sample in k_num_list:
+            gene_str = gene_str + k_num_dict[k_num_sample] + &quot;;&quot;
+            num_gene = gene_str.count(';')
+        # pathway_f.write(&quot;Pathway\tGenes annoted in term\tPathway ID\tLevel1\tLevel2\tKOs\tGenes\n&quot;)
+        pathway_f.write(pathway + '\t' + str(num_gene)+ '\t'  + ko +'\t' +level1 + '\t'+level2 +'\t'+ko_sample_dict[ko].rstrip(';')+ '\t' + gene_str.rstrip(';')+'\n')
+    anno_f.close()
+    pathway_f.close()
+
+
+
+if len(sys.argv) &lt; 2:  #直接执行本脚本给出帮助信息
+    print(doc)
+    sys.exit()
+elif len(sys.argv) == 2:
+        kaas_inflie = sys.argv[1]
+        K_list_Parser(kaas_inflie)
+
+elif len(sys.argv) == 3:
+        kaas_inflie = sys.argv[1]
+        sp = sys.argv[2]
+        K_list_Parser(kaas_inflie,sp)
+else:
+    print(doc)
+    sys.exit()
+</code></pre>
+<pre><code class="language-bash"># 特定物种注释，猪ssc
+python3 pathway.py group_rep.kofam.out ssc
+
+# 结果说明
+br08901.keg	kegg pathway分级文件
+group_repkofam.kegg_anno.xls	基因K，ko注释（按基因）
+group_repkofam.kegg_pathway_stata.xls	基因pathway注释统计（按pathway）
+group_repkofamK_codes_not_in_pathway_map.list	没有注释到path的Orthology （K id）
+kegg_pathway_map.xls	kegg pathway分级表
+ko00001.keg	同源簇（KEGG Orthology--KO）信息（参考或特定物种）
+
+# 对group_repkofam.kegg_pathway_stata.xls进一步分析，下载至本地，Level1限制为Metabolism，提取相关的GENE并去重。
+</code></pre>
+<p><strong>编写提取脚本extract.py</strong></p>
+<pre><code class="language-python">import pandas as pd
+
+input_file = '/home/xb/1_results/240906_pig_genome_annot/kegg/metabolism.pro.list'
+output_file = '/home/xb/1_results/240906_pig_genome_annot/kegg/metabolism.pro.id'
+
+# 读取只有一列的文件
+df = pd.read_csv(input_file, header=None)
+
+# 提取唯一一列（蛋白ID）
+protein_ids = df.iloc[:, 0]
+
+# 分割蛋白ID并保存到新文件
+with open(output_file, 'w') as outfile:
+    for protein_id in protein_ids:
+        # 如果有分号，则按分号分割
+        ids = protein_id.split(';')
+        # 写入文件
+        for id in ids:
+            outfile.write(f&quot;{id}\n&quot;)
+</code></pre>
+<pre><code class="language-bash">python3 extract.py
+
+sort -n metabolism.pro.id |uniq &gt; rmdup.pro.id  #最终得到蛋白ID 4926条
+</code></pre>
+<p><strong>根据蛋白ID从GBFF中提取Gene_id，最终得到基因序列1740条。(测试了不限制物种的注释到pathway，结果为1759条gene)</strong></p>
+<p><strong>切割gene id，从ncbi中批量下载gene序列，参考前文，这里不做赘述！</strong></p>
+<h4 id="比较三个数据库的注释结果以韦恩图和表格的形式展示">比较三个数据库的注释结果，以韦恩图和表格的形式展示。</h4>
+<p><strong>先在pc端整理出一个三个数据库注释的gene id表格：all.gene.tab，然后用python分析。</strong></p>
+<pre><code class="language-bash">mkdir diff_compare  &amp;&amp; cd diff_compare
+
+python3 analysis.py
+</code></pre>
+<pre><code class="language-python"># 读取表格数据
+file_path = '/home/xb/1_results/240906_pig_genome_annot/diff_compare/all.gene.tab'
+df = pd.read_csv(file_path, sep='\t')
+
+# 将每一列的基因ID提取为集合
+kegg_set = set(df['KEGG'].dropna())
+hmdb_set = set(df['HMDB'].dropna())
+eggnog_set = set(df['EGGNOG'].dropna())
+
+# 生成韦恩图
+plt.figure(figsize=(8, 8))
+venn = venn3([kegg_set, hmdb_set, eggnog_set], ('KEGG', 'HMDB', 'EGGNOG'))
+plt.title('KEGG vs HMDB vs EGGNOG Gene IDs')
+output_venn_path = '/home/xb/1_results/240906_pig_genome_annot/diff_compare/venn_diagram.png'
+plt.savefig(output_venn_path)  # 直接保存图片，不需要显示
+plt.close()  # 关闭图像窗口
+
+# 提取韦恩图各部分的基因ID
+venn_data = {
+    'KEGG_only': kegg_set - hmdb_set - eggnog_set,
+    'HMDB_only': hmdb_set - kegg_set - eggnog_set,
+    'EGGNOG_only': eggnog_set - kegg_set - hmdb_set,
+    'KEGG_HMDB': kegg_set &amp; hmdb_set - eggnog_set,
+    'KEGG_EGGNOG': kegg_set &amp; eggnog_set - hmdb_set,
+    'HMDB_EGGNOG': hmdb_set &amp; eggnog_set - kegg_set,
+    'All_three': kegg_set &amp; hmdb_set &amp; eggnog_set
+}
+
+# 将各部分基因ID保存为表格
+output_table_path = '/home/xb/1_results/240906_pig_genome_annot/diff_compare/venn_data.xlsx'
+with pd.ExcelWriter(output_table_path) as writer:
+    for section, genes in venn_data.items():
+        pd.DataFrame(list(genes), columns=[section]).to_excel(writer, sheet_name=section, index=False)
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://xiaobin-phd.github.io/post-images/1726533555852.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[猪代谢相关基因注释]]></title>
+        <id>https://xiaobin-phd.github.io/post/zhu-dai-xie-xiang-guan-ji-yin-zhu-shi/</id>
+        <link href="https://xiaobin-phd.github.io/post/zhu-dai-xie-xiang-guan-ji-yin-zhu-shi/">
+        </link>
+        <updated>2024-09-09T00:43:40.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1-参考基因组下载">1、参考基因组下载</h3>
+<p><strong>基因组选择：Genome assembly Sscrofa11.1 （官方参考基因组，杜洛克雌猪）</strong></p>
+<pre><code>wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003/025/GCF_000003025.6_Sscrofa11.1/GCF_000003025.6_Sscrofa11.1_genomic.fna.gz
+wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003/025/GCF_000003025.6_Sscrofa11.1/GCF_000003025.6_Sscrofa11.1_protein.faa.gz
+ 
+# MD5校验
+wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003/025/GCF_000003025.6_Sscrofa11.1/md5checksums.txt
+ 
+md5sum -c md5checksums.txt
+</code></pre>
+<h3 id="2-基因组注释">2、基因组注释</h3>
+<p><strong>uniprot注释 （包括下载，建库和注释三部分）</strong></p>
+<pre><code class="language-bash">wget -c https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
+gzip -d uniprot_sprot.fasta.gz
+
+makeblastdb -in ~/0_rawdata/database/uniprot/uniprot_sprot.fasta -dbtype prot -out ~/0_rawdata/database/uniprot/uni
+blastdbcmd -info -db  /home/xb/0_rawdata/database/uniprot/uni # 检查数据库构建是否正确
+
+nohup blastx -query /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_genomic.fna -db ~/0_rawdata/database/uniprot/uni -max_target_seqs 1 -outfmt 6 -evalue 1e-5 &gt; uniprot.out &amp;
+
+# 已放弃，速度慢且达不到想要的结果。
+jobs -l 
+kill -9 20239
+
+# 重新对faa文件进行注释
+diamond makedb --in uniprot_sprot.fasta -d uni
+
+nohup diamond blastp -d ~/0_rawdata/database/uniprot/uni.dmnd -q /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_protein.faa -o pig.uni.xml -f 5 --sensitive --max-target-seqs 20 -e 1e-5 --id 20 --tmpdir /dev/shm --index-chunks 1 -p 8 &amp;
+
+parsing_blast_result.pl --evalue 1e-5 --HSP-num 1 --out-hit-confidence --suject-annotation pig.uni.xml &gt; pig.uni.tab
+
+</code></pre>
+<p>根据参考文献方法，发现eggnog注释可能更切合我们的需求，能直接得出带有EC号的蛋白。</p>
+<p>软件安装和使用参考：https://www.yunbios.net/eggNOG.html （包括下载安装，数据库下载，比对）</p>
+<pre><code class="language-bash">conda create -n eggnog
+conda activate eggnog
+conda install -c bioconda -y eggnog-mapper
+
+wget -c http://eggnog6.embl.de/download/emapperdb-5.0.2/eggnog_proteins.dmnd.gz
+gzip -d eggnog_proteins.dmnd.gz   # 测试失败，得用软件提供的脚本下载数据库。
+
+# 首先要手动创建一个data文件夹，脚本默认不创建。
+mkdir -p /home/xb/miniconda3/envs/eggnog/lib/python3.12/site-packages/data
+
+download_eggnog_data.py #使用官方脚本下载数据库
+
+nohup emapper.py -i /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_protein.faa -o pig --cpu 4 --seed_ortholog_evalue 1e-5 --dmnd_db /home/xb/miniconda3/envs/eggnog/lib/python3.12/site-packages/data/eggnog_proteins.dmnd &amp;
+
+# 运行时间大概在30min，下载pig.emapper.annotations至本地，提取注释到含有EC号的蛋白（12359条），并提取序列。
+sort -n id.list |uniq &gt; rmdup.list   #去重复，虽然eggnog注释貌似不像blast一样有重复序列
+
+fasta_extract_subseqs_from_list.pl /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_protein.faa rmdup.list &gt; target.faa
+
+# 使用cd-hit去除重复序列，然后回比到基因组上。
+conda install -c bioconda cd-hit
+cd-hit -i target.faa -o target.0.95.faa -c 0.95   # 去重后剩余 5270 条
+
+mkdir blastx &amp;&amp; cd blastx
+makeblastdb -in ../target.0.95.faa -dbtype prot -out ./ec
+blastdbcmd -info -db ./ec
+
+nohup blastx -query /data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_genomic.fna -db ./ec  -max_target_seqs 1 -outfmt 5 -evalue 1e-5 -num_threads 8 &gt; pig.out &amp;    # 无结果，转化成tab显示没有比对上的，因为分析时间太长，无法复现
+</code></pre>
+<h3 id="3-根据protein_id提取对应的gene_id新思路">3、根据protein_id提取对应的gene_id（新思路)</h3>
+<p><strong>查询资料，发现可以直接从gbff中提取gene_id，整理一个脚本测试该功能</strong>（我爱gpt！）</p>
+<pre><code class="language-python">from Bio import SeqIO
+
+def extract_gene_ids(gbff_file, protein_ids_file, output_file):
+    # 读取蛋白质ID列表
+    with open(protein_ids_file, 'r') as f:
+        protein_ids = [line.strip() for line in f.readlines()]
+
+    # 创建一个字典来存储蛋白质ID与基因ID的映射
+    protein_to_gene = {}
+
+    # 解析GBFF文件
+    for record in SeqIO.parse(gbff_file, &quot;genbank&quot;):
+        for feature in record.features:
+            if feature.type == &quot;CDS&quot;:
+                # 提取protein_id
+                if &quot;protein_id&quot; in feature.qualifiers:
+                    protein_id = feature.qualifiers[&quot;protein_id&quot;][0]
+                    if protein_id in protein_ids:
+                        # 提取GeneID
+                        gene_ids = [xref.split(&quot;:&quot;)[1] for xref in feature.qualifiers.get(&quot;db_xref&quot;, []) if xref.startswith(&quot;GeneID&quot;)]
+                        if gene_ids:
+                            protein_to_gene[protein_id] = gene_ids[0]  # 只取第一个GeneID
+
+    # 输出结果到文件
+    with open(output_file, 'w') as out_f:
+        out_f.write(&quot;Protein_ID\tGene_ID\n&quot;)
+        for protein_id in protein_ids:
+            gene_id = protein_to_gene.get(protein_id, &quot;Not found&quot;)
+            out_f.write(f&quot;{protein_id}\t{gene_id}\n&quot;)
+
+# 示例使用
+gbff_file = &quot;/data/xb/1_pig_genome/GCF_000003025.6_Sscrofa11.1_genomic.gbff&quot;          # 替换为你的GBFF文件路径
+protein_ids_file = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/rmdup.list&quot;  # 替换为包含蛋白质ID的txt文件路径
+output_file = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/extract_from_gbff/gene.id.txt&quot;     # 输出结果的文件路径
+
+extract_gene_ids(gbff_file, protein_ids_file, output_file)
+</code></pre>
+<pre><code class="language-bash"># 提取第二列的gene_id并去重
+cat gene.id.txt|cut -f2 &gt; id.list
+sort -n id.list |uniq &gt; rmdup.list   #包括 3691 条gene
+</code></pre>
+<p><strong>无效路径，仅做记录。</strong></p>
+<pre><code class="language-bash"># 再整理一个脚本，根据gene_id先从NCBI中批量提取对应的gene 序列文件（需要先获取API接口）。
+# gpt回答的无法实现
+
+# 要根据GeneID提取gene的fasta序列需要分为两步：将GeneID转换为相应的nucleotide ID或者RefSeq ID。GeneID本身通常在 `gene` 数据库中用于注释和搜索，但实际的序列数据在 `nucleotide` 数据库中。
+# gpt回复任然无效
+</code></pre>
+<p><strong>参考一个帖子找到灵感：<a href="https://blog.csdn.net/qq_65680034/article/details/136400958">如何从NCBI上的Gene数据库批量下载基因序列数据_ncbi批量下载基因序列-CSDN博客</a>   [官方指导文件](<a href="https://www.ncbi.nlm.nih.gov/datasets/docs/v2/languages/">Supported programming languages (nih.gov)</a>)</strong></p>
+<p><strong>实操过程如下：第一步，通过OpenAPI java libraries建立Build Python NCBI Datasets API v2alpha library</strong></p>
+<pre><code>#!/usr/bin/env bash  编写一个bash脚本，直接运行即可（安装路径为：/home/xb/3_opt/ncbi_api）。
+OUTPUT_DIR=&quot;python_lib&quot;
+ 
+wget https://www.ncbi.nlm.nih.gov/datasets/docs/v2/openapi3/openapi3.docs.yaml
+ 
+wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/7.2.0/openapi-generator-cli-7.2.0.jar -O openapi-generator-cli.jar
+ 
+java -jar openapi-generator-cli.jar generate -g python -i openapi3.docs.yaml --package-name &quot;ncbi.datasets.openapi&quot; --additional-properties=pythonAttrNoneIfUnset=true,projectName=&quot;ncbi-datasets-pylib&quot;
+</code></pre>
+<p><strong>这一步之后要输入：   <u>pip install .</u>   （非常重要，官方文档没有提到，但是不运行此步骤后面会报错）</strong></p>
+<p><strong>第二步，编写提取脚本gene_get_info.py</strong></p>
+<pre><code class="language-python">import sys
+import csv
+import io
+import os
+from typing import List
+from zipfile import ZipFile
+ 
+from ncbi.datasets.openapi import ApiClient as DatasetsApiClient
+from ncbi.datasets.openapi import ApiException as DatasetsApiException
+from ncbi.datasets.openapi import GeneApi as DatasetsGeneApi
+ 
+zipfile_name = &quot;gene.zip&quot;  #自定义下载的压缩包名称
+output_file_name = &quot;protein.faa&quot;  # 自定义输出的文件名称
+
+ 
+# 从CSV文件中读取基因ID并存储在列表中
+gene_ids_from_csv = []
+csv_file_path = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/extract_from_gbff/rmdup.list&quot;  # 基因ID的CSV文件路径
+ 
+with open(csv_file_path, newline='') as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+        gene_id = int(row[0])  # 基因ID在CSV文件的第二列
+        gene_ids_from_csv.append(gene_id)
+ 
+# 将基因ID列表转换为字符串格式，形如 &quot;[1, 2, 3, ...]&quot;
+gene_ids_string = str(gene_ids_from_csv)
+ 
+# 将字符串中的单引号替换为双引号，使其成为合法的Python列表表示形式
+gene_ids_string = gene_ids_string.replace(&quot;'&quot;, '&quot;')
+ 
+# 将字符串转换为Python列表
+gene_ids_list = eval(gene_ids_string)
+ 
+ 
+with DatasetsApiClient() as api_client:
+    gene_ids: List[int] = gene_ids_list
+    gene_api = DatasetsGeneApi(api_client)
+    try:
+        gene_dataset_download = gene_api.download_gene_package_without_preload_content(
+            gene_ids,
+            include_annotation_type=[&quot;FASTA_GENE&quot;, &quot;FASTA_PROTEIN&quot;],  #选择下载的数据格式
+        )
+ 
+        with open(zipfile_name, &quot;wb&quot;) as f:
+            f.write(gene_dataset_download.data)
+    except DatasetsApiException as e:
+        sys.exit(f&quot;Exception when calling GeneApi: {e}\n&quot;)
+ 
+ 
+try:
+    dataset_zip = ZipFile(zipfile_name)
+    zinfo = dataset_zip.getinfo(os.path.join(&quot;ncbi_dataset/data&quot;, &quot;protein.faa&quot;))
+    with io.TextIOWrapper(dataset_zip.open(zinfo), encoding=&quot;utf8&quot;) as fh:
+        with open(output_file_name, &quot;w&quot;, encoding=&quot;utf8&quot;) as output_file:
+            output_file.write(fh.read())
+except KeyError as e:
+    sys.exit(f&quot;File {output_file_name} not found in zipfile: {e}&quot;)
+</code></pre>
+<p><strong>第三步，运行程序。</strong></p>
+<pre><code class="language-bash">source ~/3_opt/cobra/bin/activate
+pip install python_lib
+
+chmod 755 gene_get_info.py
+python3 gene_get_info.py
+</code></pre>
+<p><strong>第四步，性能测试，受限于ncbi，一次性无法下载3691条gene，经测试发现单次最多只能下载700条（循环下载的话只能600），因此需要先分割gene_id_list，然后再提取gene 序列，脚本改进如下：</strong></p>
+<pre><code class="language-python"># 分割脚本，按照500个切割表格，形成多个小表格供后续使用。
+import csv
+import os
+
+def split_list(lst, n):
+    &quot;&quot;&quot;将列表分割成多个小列表，每个列表最多包含n个元素。&quot;&quot;&quot;
+    for i in range(0, len(lst), n):
+        yield lst[i:i + n]
+
+def save_split_files(gene_ids, batch_size, output_dir):
+    &quot;&quot;&quot;将基因ID列表分割并保存到多个CSV文件中。&quot;&quot;&quot;
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    for idx, batch in enumerate(split_list(gene_ids, batch_size), start=1):
+        file_path = os.path.join(output_dir, f'batch_{idx}.csv')
+        with open(file_path, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            for gene_id in batch:
+                writer.writerow([gene_id])
+
+if __name__ == &quot;__main__&quot;:
+    csv_file_path = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/extract_from_gbff/rmdup.list&quot;  # 输入CSV文件路径
+    output_dir = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/extract_from_gbff/split_files&quot;  # 输出目录
+    batch_size = 600  # 每个文件的基因ID数量
+
+    gene_ids_from_csv = []
+    with open(csv_file_path, newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            if len(row) &gt; 0:
+                gene_id = int(row[0])  # 基因ID在CSV文件的第一列
+                gene_ids_from_csv.append(gene_id)
+
+    save_split_files(gene_ids_from_csv, batch_size, output_dir)
+</code></pre>
+<p><strong>然后再访问NCBI API批量下载数据（压缩包形式，按gene_id命</strong>名）</p>
+<pre><code class="language-python"># 下载脚本，根据id下载gene序列，有的gene id在性染色体上，对应能查出两条基因序列。
+import sys
+import csv
+import io
+import os
+from typing import List
+from zipfile import ZipFile
+from ncbi.datasets.openapi import ApiClient as DatasetsApiClient
+from ncbi.datasets.openapi import ApiException as DatasetsApiException
+from ncbi.datasets.openapi import GeneApi as DatasetsGeneApi
+
+def download_and_extract_genes(gene_ids: List[int], zipfile_name: str, output_file_name: str):
+    &quot;&quot;&quot;下载基因数据并提取到文件中。&quot;&quot;&quot;
+    with DatasetsApiClient() as api_client:
+        gene_api = DatasetsGeneApi(api_client)
+        try:
+            gene_dataset_download = gene_api.download_gene_package_without_preload_content(
+                gene_ids,
+                include_annotation_type=[&quot;FASTA_GENE&quot;, &quot;FASTA_PROTEIN&quot;],  # 选择下载的数据格式
+            )
+
+            with open(zipfile_name, &quot;wb&quot;) as f:
+                f.write(gene_dataset_download.data)
+        except DatasetsApiException as e:
+            sys.exit(f&quot;Exception when calling GeneApi: {e}\n&quot;)
+
+    try:
+        with ZipFile(zipfile_name) as dataset_zip:
+            zinfo = dataset_zip.getinfo(os.path.join(&quot;ncbi_dataset/data&quot;, &quot;protein.faa&quot;))
+            with io.TextIOWrapper(dataset_zip.open(zinfo), encoding=&quot;utf8&quot;) as fh:
+                with open(output_file_name, &quot;a&quot;, encoding=&quot;utf8&quot;) as output_file:
+                    output_file.write(fh.read())
+    except KeyError as e:
+        sys.exit(f&quot;File {output_file_name} not found in zipfile: {e}&quot;)
+
+def process_csv_files(input_dir: str, output_file_name: str):
+    &quot;&quot;&quot;处理目录中的所有CSV文件并提取基因数据。&quot;&quot;&quot;
+    csv_files = [f for f in os.listdir(input_dir) if f.endswith('.csv')]
+    if not csv_files:
+        sys.exit(f&quot;No CSV files found in directory: {input_dir}&quot;)
+
+    # 确保输出文件存在
+    open(output_file_name, 'w').close()
+
+    for csv_file in csv_files:
+        csv_file_path = os.path.join(input_dir, csv_file)
+        with open(csv_file_path, newline='') as csvfile:
+            reader = csv.reader(csvfile)
+            gene_ids_from_csv = [int(row[0]) for row in reader if len(row) &gt; 0]
+        
+        # 使用 CSV 文件名作为唯一标识的一部分
+        zipfile_name = f&quot;gene_{os.path.splitext(csv_file)[0]}.zip&quot;
+        download_and_extract_genes(gene_ids_from_csv, zipfile_name, output_file_name)
+
+if __name__ == &quot;__main__&quot;:
+    input_dir = &quot;/home/xb/1_results/0906_pig_genome_annot/eggnog/extract_from_gbff/split_files&quot;  # CSV文件所在目录
+    output_file_name = &quot;combined_protein.faa&quot;  # 合并后的输出文件
+
+    process_csv_files(input_dir, output_file_name)
+</code></pre>
+<p><strong>解压、重命名及合并fna文件</strong></p>
+<pre><code class="language-bash">#!/bin/bash   解压&amp;重命名
+
+# 确保目标文件夹存在
+mkdir -p gene_output
+
+# 遍历所有以 gene_batch_ 开头的 zip 文件
+for zip_file in gene_batch_*.zip; do
+    # 提取文件名（去掉扩展名）
+    base_name=$(basename &quot;$zip_file&quot; .zip)
+    
+    # 解压指定文件并重命名
+    unzip -j &quot;$zip_file&quot; ncbi_dataset/data/gene.fna -d ./gene_output/ &amp;&amp;
+    mv ./gene_output/gene.fna ./gene_output/${base_name}.fna
+done
+</code></pre>
+<pre><code class="language-bash">cd gene_output/
+
+cat *.fna &gt; output.fna
+seqtk seq -A output.fna | sort -u &gt; output.rmdup.fna
+
+grep &quot;&gt;&quot; output.rmdup.eggnog.fna |wc -l   # 最后得到3694条gene,结果文件为output.rmdup.eggnog.fna
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240831-BossTalk]]></title>
+        <id>https://xiaobin-phd.github.io/post/20240831-bosstalk/</id>
+        <link href="https://xiaobin-phd.github.io/post/20240831-bosstalk/">
+        </link>
+        <updated>2024-08-31T01:45:40.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>前天半夜接收了boss的文献，加急阅读后，今天与之探讨。内容主要为后续开展的研究方向，整体和之前所定的不变，大方向还是探究弓形虫和宿主的代谢互作机制，阐明寄生虫依赖的核心代谢通路，探索寄生虫为什么要”寄生“。在此基础上进行了细化，分为两条路径，此外还提出了一些涉及表观遗传的子课题，详细如下</strong></p>
+<h3 id="方向1不同阶段弓形虫代谢差异比较裂缓殖子等">方向1：不同阶段弓形虫代谢差异比较（裂/缓殖子等）</h3>
+<pre><code class="language-bash"># 对于不同阶段的弓形虫，其转录组等组学数据非常丰富，基于此条件及约束，构建代谢网络模型，分析不同阶段弓形虫的代谢差异。
+
+# 故事点：寄生虫为何要寄生？猫为什么是唯一的终末宿主？
+
+# 困难点：代谢网络模型的构建？实验和所述故事的结合？
+
+重要性：★★★★★
+</code></pre>
+<h3 id="方向2弓形虫代谢相关基因的全基因筛选">方向2：弓形虫代谢相关基因的全基因筛选</h3>
+<pre><code class="language-bash"># 筛选弓形虫代谢相关基因对其生长、发育的重要性
+
+# 纯湿实验向，筛选出重要的代谢相关基因，最终结合代谢网络模型做比较分析，干湿结合，提高文章水平。
+
+# 困难点：实验技能
+
+重要性：★★★★
+</code></pre>
+<h3 id="子课题单细胞水平探究弓形虫及宿主细胞的发育生物学表观遗传方向">子课题：单细胞水平探究弓形虫及宿主细胞的发育生物学（表观遗传方向）</h3>
+<pre><code class="language-bash"># 问题来源：来自单克隆，遗传物质完全相同的弓形虫速殖子，在培养过程中，总有一部分缓殖子的存在，反之亦然。这种现象是因为表观遗传学导致的。目前课题组研究手段是基于整体开展实验，很难考虑到不同细胞的异质性，无法解析上述问题。
+
+# 目前有很多单细胞水平研究表观遗传学的方法，有些甚至能同时探究不同的组蛋白修饰和基因表达情况，将其应用到弓形虫或者宿主细胞（弓形虫感染前后），可以得到很多有趣的结果，比如弓形虫发育的异质性，不同宿主细胞的变化等。
+
+# 困难点：背景知识了解+相关实验 （相对代谢建模要简单的多）
+
+# 任务：整理相关方法异同，优缺点和应用场景。 后续可能组建团队开展此课题。
+
+重要性：★★★
+</code></pre>
+<h3 id="其它代谢建模合作课题组">其它：代谢建模合作课题组</h3>
+<pre><code class="language-bash"># 介绍了先进院的陈禹老师，boss对其不太了解，但肯定了他的成果，近期也会对他的文章进行阅读，学习他的思路。
+
+# boss更偏向于找华农本土的课题组进行合作，交流更加方便，也利于我去学习等。陈禹课题组可能也会联系，都是后续的事情了。
+
+# 近期需要重拾代谢网络建模的学习，依然是以自学为主，把这方面工作推进起来。这也是很多方向开展的前提！
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[实验相关概念Q&A]]></title>
+        <id>https://xiaobin-phd.github.io/post/shi-yan-xiang-guan-gai-nian-qanda/</id>
+        <link href="https://xiaobin-phd.github.io/post/shi-yan-xiang-guan-gai-nian-qanda/">
+        </link>
+        <updated>2024-06-20T14:17:05.000Z</updated>
+        <content type="html"><![CDATA[<p>1、染色质重塑因子</p>
+<pre><code>染色质重塑因子（chromatin remodeling factors）是调控染色质结构和基因表达的重要蛋白质复合物。它们通过改变核小体（由DNA缠绕组装的结构）的位置、构象或组成，来调控基因的转录、复制、修复等过程。染色质重塑因子可以松弛或紧密包装DNA，从而使特定基因区域变得更易于或更难以被转录因子和其他调控蛋白接触。
+
+SWI/SNF是最早被发现的染色质重塑复合物之一。它通过ATP水解驱动核小体重定位，从而调节基因的转录活性。SWI/SNF复合物在多种生物体中都有发现，包括酵母、果蝇和人类。
+ISWI（Imitation Switch）复合物通过核小体滑动和重组，维持染色质的结构和基因的转录调控。它在维持基因组的稳定性和细胞周期调控中起重要作用。
+
+</code></pre>
+<p>2、CO-IP</p>
+<pre><code>共免疫沉淀（Co-Immunoprecipitation，简称Co-IP）是一种用于研究蛋白质相互作用的生物化学技术。该方法利用特定抗体与目标蛋白结合，从而共沉淀与目标蛋白相互作用的蛋白质复合物。这种方法可以帮助研究人员鉴定蛋白质间的相互作用网络，并了解这些相互作用在细胞功能中的作用。
+</code></pre>
+<p>3、mini-AID</p>
+<pre><code>生长素诱导的蛋白降解子（Auxin-Inducible Degron，AID）系统是一种用于调控靶向蛋白降解的工具。它的核心原理是利用生长素（auxin）对特定蛋白标记的影响，从而能够在细胞内快速和可控地降解靶向蛋白。
+
+AID系统的工作原理：
+标记靶向蛋白：
+在目标蛋白的N端或C端附加一个AID标签（例如，OsTIR1-AID标签），该标签包含一个特定的蛋白降解信号序列（degron）。
+添加生长素：
+当细胞暴露于生长素（例如生长素类似物1-萘乙酸，NAA）时，生长素将结合到AID系统中的生长素受体（例如，TIR1蛋白），形成生长素-TIR1复合物。
+靶向蛋白的降解：
+生长素-TIR1复合物识别AID标签，并介导目标蛋白的泛素化和降解过程。这一过程通常通过泛素连接系统来实现，即将泛素蛋白连接酶（E3 ligase）介导的泛素化，将目标蛋白标记为需要降解的废物。
+
+可用于条件性敲除：，以CRISPR/Cas9 基因编辑技术为基础构建用生长素诱导的Mini-AID（mAID）降解系统，以实现APC2 的条件性降解的虫株，以表达对应降解原件的TIR1-RH Δhxgprt 虫株作为母本虫株，将带有HA 标签和HXGPRT 药物筛选标签的mAID插入TgAPC2 的内源位点，并与TgAPC2 编码基因的C 末端融合（图3-4 a），从而构建APC2-mAID 虫株
+</code></pre>
+<p>4、Direct直敲   双敲除   KO  KI  CKO</p>
+<pre><code>直敲（Direct Knock-in/Direct Knock-out）：这通常指通过直接的方法在基因组中引入（Knock-in, KI）或移除（Knock-out, KO）特定基因或基因序列。这种方法通常依赖于CRISPR-Cas9等基因编辑工具来实现特定的基因操作。
+
+双敲除（Double Knock-out, DKO）：指同时敲除两个不同基因。这可以用于研究两个基因在某一特定生物过程中的相互作用和功能。双敲除可以通过多步基因编辑或者同时使用多种CRISPR-Cas9系统来实现。
+
+条件性敲除（Conditional Knock-out, CKO）：指在特定时间或特定组织中敲除某一基因。这通常通过Cre-LoxP或Floxed系统实现。基因在整个生物体中正常表达，但在特定条件下（如特定的发育阶段或特定组织中）被敲除，从而研究该基因在特定条件下的功能。
+</code></pre>
+<p>5、弱毒疫苗</p>
+<pre><code>灭活疫苗（Inactivated Vaccines）
+定义：使用被杀死或灭活的病原体制成的疫苗。这些病原体不能引起疾病，但可以刺激免疫系统产生抗体。
+示例：甲型肝炎疫苗、狂犬病疫苗、脊髓灰质炎疫苗（IPV）
+
+减毒活疫苗（Live Attenuated Vaccines）
+定义：使用经过减毒处理的活病原体制成的疫苗。病原体仍然具有感染能力，但其致病性大大降低，不会引起严重疾病。
+示例：麻疹、腮腺炎和风疹联合疫苗（MMR）、水痘疫苗、黄热病疫苗、口服脊髓灰质炎疫苗（OPV）。
+
+亚单位疫苗（Subunit Vaccines）
+定义：使用病原体的部分成分（如蛋白质、糖类）制成的疫苗。这种疫苗只包含引发免疫反应所需的关键部分，而不包含完整的病原体。
+示例：乙型肝炎疫苗、百日咳疫苗（无细胞百日咳疫苗）、人乳头瘤病毒（HPV）疫苗。
+
+类毒素疫苗（Toxoid Vaccines）
+定义：使用经过化学或热处理的毒素制成的疫苗。这些毒素失去了毒性，但仍能引起免疫反应。
+示例：白喉疫苗、破伤风疫苗。
+
+结合疫苗（Conjugate Vaccines）
+定义：将病原体的多糖抗原与蛋白质载体结合制成的疫苗。这种方式能够增强免疫反应，特别是对儿童有效。
+示例：肺炎链球菌结合疫苗、脑膜炎球菌结合疫苗、Hib（Haemophilus influenzae type b）疫苗。
+
+mRNA疫苗（mRNA Vaccines）
+定义：使用编码病原体抗原的mRNA制成的疫苗。mRNA进入人体细胞后指导细胞合成病原体蛋白，从而激发免疫反应。
+示例：新冠病毒疫苗（如辉瑞-BioNTech的BNT162b2和Moderna的mRNA-1273）。
+
+病毒载体疫苗（Viral Vector Vaccines）
+定义：使用无害病毒（载体）将病原体基因片段传递到人体细胞中，从而诱导免疫反应。
+示例：新冠病毒疫苗（如阿斯利康的ChAdOx1-S（AZD1222）和强生的Ad26.COV2.S）。
+
+DNA疫苗（DNA Vaccines）
+定义：使用携带病原体基因的环状DNA（质粒）制成的疫苗。这些DNA进入细胞后指导合成病原体蛋白，激发免疫反应。
+示例：正在研发中的一些新冠病毒DNA疫苗（如Inovio的INO-4800）。
+
+重组蛋白疫苗（Recombinant Protein Vaccines）
+定义：使用通过基因工程技术在实验室中合成的病原体蛋白制成的疫苗。
+示例：新冠病毒疫苗（如诺瓦瓦克斯的NVX-CoV2373）。
+</code></pre>
+<p>6、宿主因子</p>
+<pre><code>宿主因子（Host factors）是指影响宿主生物体对病原体感染和疾病发展的各种因素，这些因素可以是宿主的生理状态、细胞功能、免疫系统、基因组特征等。它们在感染性疾病的发生、病程和治疗中起着关键作用，能够显著影响病原体的生长、复制和传播，以及宿主对感染的反应。
+</code></pre>
+<p>7、WB  IFA</p>
+<pre><code>Western Blot，即西方印迹分析，是一种用于检测和分析蛋白质的技术。它通过电泳分离蛋白质，然后将其转移至膜上，并使用特异性抗体进行检测和分析。首先，通过SDS-PAGE（聚丙烯酰胺凝胶电泳）或其他电泳技术，将待测样品中的蛋白质按照大小分离。分离后，将蛋白质转移到膜上（如聚偏氟乙烯膜），然后使用特异性的一抗体结合目标蛋白。最后，通过二抗体结合的酶或荧光素进行检测，从而显示目标蛋白的存在和表达水平。
+
+应用：WB广泛用于定量分析蛋白质的表达水平、检测蛋白质的修饰状态（如磷酸化、乙酰化等）、确认蛋白质的存在与否，以及研究蛋白质在细胞信号传导和疾病发生中的作用。
+
+Immunofluorescence Assay，即免疫荧光染色法，是一种用于检测和定位蛋白质、抗原或抗体在细胞或组织中的位置和分布的技术。首先，通过固定、穿透和阻断步骤，将待测的细胞或组织固定在载玻片上。然后，使用特异性的一抗体与目标蛋白或抗原结合。接着，再使用荧光标记的二抗体结合到一抗体上，形成荧光标记复合物。最后，通过荧光显微镜观察和记录荧光标记的目标物的位置和分布。
+
+应用：IFA广泛用于检测特定蛋白质或抗体在细胞和组织中的定位，研究细胞结构和功能，识别细胞和组织中的分子标志物，以及研究细胞间相互作用和信号传导路径。
+</code></pre>
+<p>8、酶活动力学分析</p>
+<pre><code>酶活动力学分析是研究酶在不同条件下活性和性能的一种实验方法。它主要通过测量酶催化反应的速率来评估酶的功能和特性。以下是酶活动力学分析的关键内容和步骤：
+
+关键内容：
+酶反应速率：酶活性是指酶在单位时间内催化底物转化为产物的能力。通常以单位时间内生成的产物量（如摩尔数或光学密度变化）来表示。
+酶底物浓度依赖性：酶活性通常依赖于底物的浓度。通过在不同底物浓度下测量酶反应速率，可以获得酶的底物浓度依赖性曲线。
+酶反应的最大速率和米氏常数：最大速率（Vmax）是在酶与底物饱和时的最大反应速率。米氏常数（Km）是底物浓度达到Vmax一半时的底物浓度。这些参数常用来描述酶的催化效率和亲和力。
+酶的抑制和激活：通过引入抑制剂或激活剂，可以研究酶的抑制或激活机制，从而理解酶的调控和生物学功能。
+
+分析步骤：
+制备反应混合物：将酶、底物和必要的缓冲液混合，以保持反应在适当的pH和温度下进行。
+测定酶反应速率：通过在一定时间间隔内测量反应混合物中产生的产物量或底物的消耗量来确定酶的反应速率。
+构建酶动力学曲线：在不同底物浓度下重复实验，绘制酶活性与底物浓度的曲线。通常使用Michaelis-Menten方程或其他适当的数学模型进行拟合，以获取Vmax和Km值。
+分析抑制和激活：通过引入不同浓度的抑制剂或激活剂，测量酶的活性变化，并计算抑制常数（如IC50）或激活常数（如EC50）。
+</code></pre>
+<p>9、加药  药筛</p>
+<pre><code>通过电转化，将特定的基因敲除载体导入到寄生虫中。目标基因通常是DHFR (二氢叶酸还原酶)、CAT (氯霉素乙酰转移酶) 或 FUDR (5-氟脱氧尿嘧啶)，这些都是常用的药物筛选标记，用于选择具有特定突变或基因敲除的虫株。
+</code></pre>
+<p>10、ELISA   间接ELISA</p>
+<pre><code>ELISA（酶联免疫吸附试验）是一种常用于检测特定分子（如蛋白质、抗体、抗原等）在样本中存在的定量分析技术。间接ELISA是ELISA的一种常见形式，用于检测样本中特定抗体的存在和浓度。
+
+间接ELISA的操作步骤包括：首先将感兴趣的抗原吸附在微孔板上，然后阻断非特异性结合位点。接着加入待测样本或控制物，样本中的抗体与抗原结合。随后通过洗涤去除未结合的物质，加入与目标抗体特异性结合的检测抗体，并再次洗涤。加入底物使酶产生染色反应，停止反应并用仪器测量反应产生的光信号，最终通过标准曲线计算出样本中目标抗体的浓度。
+
+直接ELISA相比于间接ELISA，省略了加入检测抗体的步骤，因此直接ELISA通常比间接ELISA更简单和直接。
+间接ELISA通过引入额外的检测抗体（标记有酶），可以增强检测的灵敏度，因为每个抗体-抗原复合物可以结合多个检测抗体分子，从而增加底物转化的速率，提高信号的检测灵敏度。
+</code></pre>
+<p>11、sgRNA</p>
+<pre><code>sgRNA代表的是“单链向导RNA”（single guide RNA），是在基因编辑技术CRISPR-Cas9中使用的一种RNA分子。
+是CRISPR-Cas9系统中的关键组成部分，用于引导Cas9蛋白到目标基因的特定位置。它通过与目标DNA序列互补结合，将Cas9蛋白引导到靶位点，从而实现基因组的精准编辑。
+</code></pre>
+<p>12、体内转录组  体外转录组</p>
+<pre><code>体内体外指小鼠，一个是注射小鼠后收集的腹水虫子测序，另一个是体外培养，细胞中的虫子。
+</code></pre>
+<p>13、CRISP值</p>
+<pre><code>CRISPR 表型值为ToxoDB 网站提供的基因适应性评分，评分越低代表其在弓形虫体外培养时越为重要。
+</code></pre>
+<p>14、mNG</p>
+<pre><code>mNeonGreen（mNG）是一种高亮度的绿色荧光蛋白，广泛用于生物标记和显微镜成像研究中。它是由Nematostella vectensis水螅水母的荧光蛋白基因改良而来，通过工程手段使其荧光特性得到优化和增强。
+</code></pre>
+<p>15、MS突变    EMS突变</p>
+<pre><code>MS突变是指天然存在的、具有突变率高于正常水平的微生物突变体。这些突变体通常在自然条件下表现出较高的突变率，可能由于其DNA修复系统的异常或特定的遗传背景导致。
+EMS突变（Ethyl Methane Sulfonate）：
+
+EMS是一种化学诱变剂，通常用于实验室中诱导DNA突变的工具。EMS能够与DNA分子中的鸟嘌呤碱基结合，导致碱基对修复过程中错误的DNA复制，从而引发点突变。
+</code></pre>
+<p>16、Occludin</p>
+<pre><code>Occludin蛋白是一种在细胞间紧密连接结构中起重要作用的蛋白质。它是一种跨膜蛋白，主要存在于上皮细胞的紧密连接带（tight junctions）中，是维持和调节细胞间隙通道的重要组成部分。
+</code></pre>
+<p>17、GFP RFP</p>
+<pre><code>GFP和RFP是两种常用的荧光蛋白，它们在生物学研究中广泛用于标记和显微镜成像等应用。
+
+GFP（Green Fluorescent Protein）：
+GFP是一种绿色荧光蛋白，最初从水母（Aequorea victoria）中发现。它能够自身吸收紫外光并发射绿色荧光，是一种天然荧光标记物质。GFP可以通过基因工程技术被连接到其他蛋白质上，使其能够在活细胞或组织中追踪和观察其位置和动态变化。
+
+RFP（Red Fluorescent Protein）：
+RFP是一种红色荧光蛋白，与GFP类似，它能够发射红色荧光。RFP通常用于与GFP同时标记不同的细胞结构或分子，通过双标记或多标记技术来进行生物成像和定位研究。
+</code></pre>
+<p>18、质粒</p>
+<pre><code>质粒（Plasmid）是一种圆形的双链DNA分子，存在于细胞质中，通常与细胞的染色体分开。质粒是细菌、酵母等单细胞生物常见的基因载体，也被广泛用于基因工程和分子生物学研究中。
+
+以下是质粒的几个关键特点和用途：
+
+结构：质粒通常由几千至几百万个碱基对组成，具有自己的起始点（origin of replication），能够独立复制和在细胞中稳定存在。它们可以携带不同长度的DNA片段，从几千碱基对到数十万碱基对不等。
+
+功能：
+基因表达载体：质粒可以携带外源基因，通过适当的启动子和转录终止子，在细胞中进行表达。
+遗传工程工具：用于DNA克隆、DNA序列分析和基因编辑等技术，例如构建转基因生物或进行基因敲除和突变分析。
+质粒载体：在分子生物学实验中，质粒常被用作DNA片段的载体，用于放大和保存感兴趣的DNA序列。
+类型：根据不同的用途和研究需求，质粒可以分为多种类型，如：
+
+表达质粒：用于外源基因的表达。
+克隆质粒：用于DNA片段的复制和扩增。
+选择性标记质粒：带有选择性标记基因（如抗生素抗性基因），用于筛选和鉴定转化的细胞。
+</code></pre>
+<p>19、瞬转</p>
+<pre><code>&quot;瞬转&quot;通常是指瞬时转染（Transfection），是一种将外源DNA或RNA导入目标细胞的技术。这种技术常用于分子生物学和细胞生物学研究中，用于引入特定基因、siRNA（小干扰RNA）或其他核酸分子到活细胞内，以研究其功能、表达效果或调控机制。
+
+瞬时转染技术因其操作简便、适用范围广泛和对细胞影响小而受到广泛应用。它不同于稳定转染，后者需要更长时间和更复杂的筛选过程来选择表达外源基因的细胞克隆。
+</code></pre>
+<p>21、T25</p>
+<pre><code>&quot;T25&quot;通常指的是细胞培养领域中使用的一种常见细胞培养瓶的规格。具体来说，T25细胞培养瓶的特点如下：
+容积：T25瓶的容积为25毫升。这个容量通常是指培养瓶能够容纳的最大液体体积，即瓶子的最大工作体积。
+</code></pre>
+<p>22、电转池</p>
+<pre><code>在基因编辑领域，特别是在转基因技术中，电转池通常指的是电转化（Electroporation）技术。电转化是一种常用的技术，用于将外源DNA或RNA导入到细胞内，从而实现基因编辑、基因表达调控或其他分子生物学操作。
+</code></pre>
+<p>23、GSEA  FDR</p>
+<pre><code>GSEA（Gene Set Enrichment Analysis）：
+
+定义：基因集富集分析，用于确定在两个或多个实验条件之间基因表达数据的差异性。
+原理：GSEA不是基于单个基因的显著性，而是根据基因集（例如通路、生物过程、功能组等）的整体表达模式在两个实验条件之间进行比较。
+操作：对于每个基因集，计算其在所有基因表达数据中的富集分数（enrichment score），并进行统计显著性检验。
+FDR（False Discovery Rate）：
+
+定义：假发现率，用于控制在多重假设检验中的错误发现数量。
+原理：FDR是在进行多重比较时控制出现假阳性的概率。通常使用调整后的p值（如q值）来表示，在统计分析中较低的q值表示结果更可靠。
+操作：通过对原始p值进行多重比较校正（如Benjamini-Hochberg方法），计算调整后的p值或q值来控制FDR。
+GSEA和FDR的关系：
+应用场景：在基因表达数据分析中，GSEA常用于发现在特定生物过程或通路中的基因集的集体表达变化，而FDR用于控制这些富集分析的统计显著性。
+解释结果：GSEA结果通常伴随着每个基因集的富集分数和统计显著性，FDR调整后的q值可以帮助确定哪些基因集的富集结果是显著的。
+</code></pre>
+<p>24、DBA</p>
+<pre><code>双花扁豆凝集素（DBA）是一种来自于豆科植物双花扁豆（Dolichos biflorus）的凝集素。凝集素是一类具有特定糖结合活性的蛋白质，通常能够与特定的糖分子结合形成凝集或沉淀。DBA主要识别和结合N-乙酰半乳糖胺（N-acetyl-galactosamine，GalNAc）糖基。
+
+在生物学研究中，DBA经常用作分子生物学实验中的工具或试剂，尤其是用于检测和分离表达N-乙酰半乳糖胺的生物分子。例如，DBA可以用于识别特定蛋白质或细胞表面糖基的存在，或者作为纯化特定糖基的工具之一。
+</code></pre>
+<p>25、snf  TURBeID</p>
+<pre><code>SNF复合体是一种在真核细胞中起重要作用的蛋白质复合体，它参与基因转录的调控。具体而言，SNF复合体是由多种蛋白质组成的复合体，其中包括激活蛋白、去乙酰化酶、ATP酶等。它的主要功能是通过改变染色质的结构和DNA的可访问性，促进或抑制基因的转录。
+
+TurboID是一种近年来发展的生物化学工具，用于研究蛋白质-蛋白质相互作用和蛋白质的亚细胞定位。TurboID技术可以用来标记并捕获与感兴趣的蛋白质相互作用的蛋白质，从而帮助研究者了解蛋白质的功能和相互作用网络。
+
+具体来说，TurboID是一种改良自Proximity-Dependent Biotinylation (BioID)技术的方法。BioID利用生物素连接酶（BirA）在特定的亚细胞位置或与感兴趣的蛋白质相互作用的蛋白质上进行生物素化，从而标记这些蛋白质的近邻蛋白质。TurboID通过使用改进的酶活性形式（称为Turbo）来提高生物素化的效率和速度，从而能够更精确地捕获和识别与目标蛋白质相互作用的蛋白质。
+</code></pre>
+<p>26、IMC HA HOCHST   CENTRIN CPN60</p>
+<pre><code>IMC (Inner Membrane Complex):
+
+定义: 内膜复合体，指原生动物（如原虫）中的一种结构，由与细胞内膜相关的蛋白质和结构组成。
+应用: 在细胞学研究中，IMC通常通过免疫组化或荧光显微镜技术进行标记和检测，以研究其在细胞结构和功能中的作用。
+HA (Hemagglutinin):
+
+定义: 表层抗原，是一种糖蛋白，常用于标记蛋白质或研究蛋白质的定位和表达。
+应用: HA标记通常通过融合HA标签到目标蛋白质上，然后利用抗HA抗体进行检测，常用于蛋白质亚细胞定位和免疫印迹分析。
+HOCHST:
+
+定义: 一种DNA染色剂，通常用于荧光显微镜下观察细胞核。
+应用: HOCHST染色剂可以与DNA结合并发出蓝紫色荧光，用于检测和观察细胞核的位置和形态。
+Centrin:
+
+定义: 一种细胞核心结构蛋白，主要参与细胞分裂和纤毛形成等过程。
+应用: 在细胞生物学和生物化学研究中，Centrin通常通过免疫组化或荧光显微镜技术进行标记，用于研究其在细胞结构和功能中的角色。
+CPN60:
+
+定义: 环状蛋白60，又称为Chaperonin 60，是一种分子伴侣蛋白，参与蛋白质的折叠和组装。
+应用: CPN60通常通过免疫组化或荧光显微镜技术进行标记，用于研究其在蛋白质折叠和细胞代谢中的作用。
+</code></pre>
+<p>27、IAA</p>
+<pre><code>IAA通常指的是吲哚乙酸（Indole-3-acetic acid），是一种天然植物生长素，也是一种重要的植物激素。吲哚乙酸在植物中起着调节生长和发育的关键作用，包括促进细胞分裂、控制细胞伸长、调节根系和茎的生长方向等。
+</code></pre>
+<p>28、流式</p>
+<pre><code>流式细胞仪（Flow cytometry）是一种用于分析和计数单个细胞的高效技术。它基于细胞在流动液体中通过激光束时所散射或发射的光信号，用来评估细胞的大小、复杂性、表面分子的表达及其在不同细胞群体中的比例等信息。
+
+流式细胞仪的基本原理和操作步骤：
+样本准备：
+细胞需要首先准备成单细胞悬浮液，以确保流式细胞仪能够单独分析每个细胞。
+可以通过消化组织或使用特殊培养技术来获得单细胞悬浮液。
+细胞染色：
+如果需要，可以使用荧光标记抗体或细胞染色剂来标记特定的细胞表面标志物或内部分子。这些标记物会发出荧光信号，帮助流式细胞仪识别和分析不同类型的细胞。
+进入流式细胞仪：
+样本通过细管引入流式细胞仪，通常在这一过程中会加入缓冲液以保持细胞的活性和稳定性。
+激光照射和光散射：
+细胞逐个通过聚焦的激光束。当激光照射到细胞时，会产生散射光，这些散射光会被收集并转化为电子信号。
+荧光检测：
+如果细胞被标记了荧光染料，流式细胞仪会检测和记录这些荧光信号的强度和波长。这些数据被用来评估每个细胞中特定标志物的表达水平。
+数据分析：
+收集到的数据通过流式细胞仪软件进行分析和解释。可以计算出不同细胞亚群的比例、特定标志物的表达水平、细胞大小和复杂性等参数。
+</code></pre>
+<p>29、翻译起始因子  转录起始因子</p>
+<pre><code>翻译起始因子（Translation initiation factors）是参与调控蛋白质合成过程中的一类蛋白质因子。它们在转录结束后，通过与核糖体和mRNA的特定序列结合，促进翻译机器的组装和启动。这些因子在确保蛋白质合成的准确性和高效性方面起着重要作用。
+
+转录起始因子（Transcription initiation factors）则是参与调控基因转录过程中的蛋白质因子。它们通过与DNA的特定序列结合，招募RNA聚合酶和其他调控蛋白质，帮助启动基因的转录过程。
+</code></pre>
+<p>30、Log2C</p>
+<pre><code>转录组的Log2C（log2 fold change）是用来衡量基因在不同条件或处理组之间表达水平变化的指标。在转录组学研究中，通常会对不同条件下的基因表达进行比较分析，以了解基因在生物学过程中的调控及其在不同生理状态或环境中的功能。
+
+其中，表达量可以是基因的RNA-seq读数、microarray信号强度或其他衡量基因表达水平的指标。正值的Log2C表示基因在条件1中上调表达，负值则表示基因在条件2中上调表达。通常，|Log2C|的值越大，表示基因表达水平变化越显著。
+</code></pre>
+<p>31、包涵体</p>
+<pre><code>包涵体通常指在细胞中过度表达的外源蛋白质聚集形成的结构。当某种外源蛋白质在细胞内表达水平过高时，细胞可能无法有效地处理和折叠这些蛋白质，导致它们聚集成包涵体。
+
+具体来说，过表达实验是指将某个基因或外源蛋白质以较高水平导入宿主细胞，通常是通过转染或转化等技术实现。在这些实验中，为了增强目标蛋白质的表达量，常常会使用强启动子或多拷贝载体来提高转录水平。然而，当蛋白质表达过多时，细胞的内质网和其他折叠机制可能无法及时或有效地处理这些蛋白质，从而导致它们形成包涵体。
+</code></pre>
+<p>32、ALD</p>
+<pre><code>Fructose 1,6-diphosphate Aldolase 1，6-二磷酸果糖醛缩酶
+</code></pre>
+<p>33、PCR 1 2 3</p>
+<pre><code>PCR1 / PCR2 / PCR3 表示（b）和（c）中使
+用的 PCR。PCR1 和 PCR2 检测筛选标签 DHFR 的 5'和 3'整合，而 PCR3 检查 LDH 基因的成功
+缺失。（b 和 c）分别对 Δldh1 和 Δldh2 敲除虫株进行 PCR 检测，野生型虫株 ME49 作为对照
+</code></pre>
+<p>34、脂质纳米颗粒疫苗</p>
+<pre><code>脂质纳米颗粒疫苗是一种利用脂质纳米颗粒作为载体，将疫苗抗原包裹在内的疫苗形式。这种疫苗技术通常采用生物相容性和生物降解性的脂质材料，如磷脂质或合成脂质，通过自组装形成纳米级别的颗粒结构。
+
+脂质纳米颗粒疫苗的主要特点和优势包括：
+
+抗原传递和保护：脂质纳米颗粒能够稳定地包裹疫苗抗原，并帮助其在体内的传递和保护，增强免疫原性。
+
+免疫刺激：颗粒尺寸的选择能够影响疫苗在免疫系统中的转运和抗原呈递，从而提高免疫刺激和效果。
+
+稳定性和保存：脂质纳米颗粒能够保护包裹的疫苗抗原不受外界环境的影响，提高疫苗的稳定性和长期保存性。
+
+生物相容性：由于使用的是生物相容性的脂质材料，这种疫苗通常具有较好的生物相容性和安全性。
+</code></pre>
+<p>35、IC50 CC50 EC50</p>
+<p>``<br>
+IC50（Half Maximal Inhibitory Concentration，半数抑制浓度）：<br>
+IC50是指抑制目标生物活性（例如酶、细胞增殖或病原体生长）50%的药物浓度。IC50越小，说明药物的抑制效果越强。<br>
+这个指标常用于评价药物对特定靶标的抑制能力。</p>
+<p>CC50（Half Maximal Cytotoxic Concentration，半数细胞毒性浓度）：<br>
+CC50是指药物导致50%细胞死亡的浓度。该指标用于衡量药物的细胞毒性。<br>
+CC50越高，表明药物的毒性越低，即药物在较高浓度下对细胞的影响较小。</p>
+<p>EC50（Half Maximal Effective Concentration，半数有效浓度）：<br>
+EC50是指能够达到药物最大效应的50%的浓度，通常用于描述药物的效力。<br>
+EC50越低，表示药物在较低浓度下就能够产生显著的效果。</p>
+<pre><code>
+36、FPKM
+36、FPKM
+
+</code></pre>
+<p>FPKM（Fragments Per Kilobase of transcript per Million mapped reads）是转录组学中常用的一种表达量单位，用于衡量基因或转录本在RNA测序数据中的表达水平。</p>
+<p>FPKM=10^9<em>C/(N</em>L)</p>
+<p>测序片段数（Fragments count, 𝐶):<br>
+测序片段数指的是在RNA测序实验中，被映射到特定基因（或转录本）上的测序片段的数量。每个测序片段对应于测序过程中得到的一个短序列，通常长度为几十到几百碱基。</p>
+<p>总映射片段数（Total mapped reads, N)：<br>
+总映射片段数是指所有测序样本中成功映射到参考基因组或转录组的测序片段的总数。这个数值通常是经过质量控制和过滤后的结果，用来反映测序深度和覆盖度的一个重要指标。</p>
+<p>基因长度（Transcript length, 𝐿)：<br>
+基因长度指的是该基因的转录本（mRNA）的总长度，通常以碱基数（例如3000碱基）来表示。基因的长度可以通过基因组注释数据或转录组组装的结果获得。</p>
+<pre><code>37、ALD
+
+</code></pre>
+<p>醛缩酶（Aldolase, ALD）主要在细胞质中发挥其功能。它在糖酵解途径中催化果糖-1,6-二磷酸裂解成甘油醛-3-磷酸和二羟基丙酮磷酸。</p>
+<pre><code>
+38、RNA干扰
+
+```makrdown
+RNA干扰（RNA interference, RNAi）是一种由双链RNA（dsRNA）介导的基因沉默机制。该机制通过特定的RNA分子抑制基因表达或翻译，阻断特定基因的mRNA分子的功能，最终抑制蛋白质的合成。RNA干扰在真核生物中广泛存在，并在基因调控、抗病毒防御和基因功能研究中发挥重要作用。
+
+RNA干扰的机制：
+
+双链RNA引入：RNA干扰过程通常由双链RNA（dsRNA）启动。这些dsRNA可以是外源引入的（如病毒感染）或内源生成的（如小干扰RNA，siRNA，或微小RNA，miRNA）。
+
+Dicer切割：Dicer酶将长的双链RNA切割成较短的片段，通常为20-25个核苷酸长的小干扰RNA（siRNA）。
+
+RNA诱导沉默复合体（RISC）装配：siRNA片段与RNA诱导沉默复合体（RISC）结合，形成活性复合体。
+
+mRNA降解或翻译抑制：RISC利用siRNA引导它与目标mRNA结合，随后切割或降解目标mRNA，阻止其翻译成蛋白质，从而实现基因沉默。
+</code></pre>
+<p>38、糖基化</p>
+<pre><code>糖基化（Glycosylation）是一种重要的生物化学修饰过程，其中糖基（通常是单糖或寡糖）通过共价键附着到蛋白质、脂质或其他生物分子上。这一过程在生物体内具有广泛的功能，包括调节蛋白质的折叠、稳定性、活性和细胞间的相互作用。糖基化可以分为几种主要类型，其中最常见的是N-糖基化和O-糖基化：
+
+N-糖基化：糖基通过N-乙酰葡萄糖胺（GlcNAc）附着到蛋白质的天冬酰胺（Asparagine, Asn）残基上。这通常发生在内质网和高尔基体中，并且与蛋白质的折叠和质量控制有关。
+
+O-糖基化：糖基通过N-乙酰半乳糖胺（GalNAc）附着到蛋白质的丝氨酸（Serine, Ser）或苏氨酸（Threonine, Thr）残基上。
+</code></pre>
+<p>38、N-糖肽组学</p>
+<pre><code>N-糖肽组学（N-glycoproteomics）；是研究蛋白质N-糖基化的一门学科。它主要关注N-糖基化的结构、功能及其在不同生物过程和疾病中的作用。N-糖肽组学的研究内容包括：
+
+识别和定量：利用质谱和其他高通量技术，识别和定量不同蛋白质上的N-糖基化位点和糖链结构。
+
+功能研究：研究N-糖基化在蛋白质功能、细胞信号传导、免疫应答和疾病中的具体作用。
+
+疾病标志物：鉴定和验证与疾病（如癌症、自身免疫疾病和遗传病）相关的N-糖基化标志物。
+
+结构分析：解析N-糖基化蛋白质的三维结构，研究糖链如何影响蛋白质的折叠和功能。
+</code></pre>
+<p>39、原位杂交</p>
+<pre><code class="language-bash">原位杂交（In Situ Hybridization, ISH）是一种分子生物学技术，用于检测组织或细胞中特定核酸序列（DNA或RNA）的空间分布。通过使用标记的探针与目标核酸序列互补配对，原位杂交可以在组织切片或细胞样本中直接定位目标基因或转录物的位置。
+</code></pre>
+<p>40、纳虫空泡（PV）和囊泡状网络（IVN）</p>
+<pre><code class="language-bash">纳虫泡（parasitophorous vacuole, PV）是弓形虫在宿主细胞内生长发育的一个重要结构。当弓形虫侵入宿主细胞时，它会形成一个由宿主细胞膜包裹的囊泡，即纳虫泡。这个纳虫泡为弓形虫提供了一个保护性的微环境，使其能够躲避宿主的免疫反应，并在细胞内生存和繁殖。
+
+弓形虫的囊泡装网络（tubulovesicular network, TVN）是指在弓形虫的纳虫泡内部，由纳虫泡膜延伸出的一种管状和囊状结构网络。这种网络被认为在弓形虫的生长和繁殖过程中起着重要作用，尤其是在调控营养物质运输和维持纳虫泡内环境的平衡方面。
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A brief compasison of GSMMs reconstruction]]></title>
+        <id>https://xiaobin-phd.github.io/post/a-brief-compasison-of-gsmms-reconstruction/</id>
+        <link href="https://xiaobin-phd.github.io/post/a-brief-compasison-of-gsmms-reconstruction/">
+        </link>
+        <updated>2024-06-18T07:14:19.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1-aureme-automatic-reconstruction-of-metabolic-models2018">1. AuReMe (Automatic Reconstruction of Metabolic Models，2018)</h3>
+<pre><code class="language-bash"># Description
+good traceability of the whole reconstruction process
+offer docker image
+creates GSMMs with a template-based algorithm
+incorporate information from MetaCyc and BIGG
+
+# reference
+DOI: https://doi.org/10.1093/nar/gkv1049
+</code></pre>
+<h3 id="2-carveme-2018">2. CarveMe (2018)</h3>
+<pre><code class="language-bash"># Description
+command-line python-based tool
+use for Flux Balance Analysis (FBA) in a few minutes
+create models from a BIGG-based manually curated universal template
+own gap-filling algorithm
+prioritize the incorporation into the network of reactions with higher genetic evidence
+
+# reference
+DOI: https://doi.org/10.1093/nar/gky537
+</code></pre>
+<h3 id="3-metadraft-2018">3. MetaDraft (2018)</h3>
+<pre><code class="language-bash"># Description
+Python-based user-friendly software
+create GSMMs from manually curated models(BIGG or any other)
+users can set priorities when multiple templates match
+support the SBML Level 3
+
+# reference
+DOI: https://doi.org/10.1371/journal.pone.0173183
+DOI: 10.5281/zenodo.2398336
+</code></pre>
+<h3 id="4-raven-version2-reconstruction-analysis-and-visualization-of-metabolic-networks-2018">4. RAVEN version2 (Reconstruction, Analysis and Visualization of Metabolic Networks, 2018)</h3>
+<pre><code class="language-bash"># Description
+runs in MATLAB is compatible with COBRA Toolbox v3
+allow users reconstruct GSMMs from KEGG, MetaCys(transporters and spontaneous reactions) and template models
+integrate an algorithm that merges network from two databases
+
+# reference
+DOI: https://doi.org/10.1371/journal.pcbi.1006541
+</code></pre>
+<h3 id="5-modelseed-version-22-2018">5. ModelSEED version 2.2 (2018)</h3>
+<pre><code class="language-bash"># Description
+web resource for reconstruction of GSMMs (microorganisms and plants)
+use RAST for genome annotation (first step)
+users can select or create a medium for gap-filling
+allow model creation in under 10 minutes (including annotation) 
+provide reaction and metabolite aliases in other databases
+
+# reference
+DOI: https://doi.org/10.1038/nbt.1672
+</code></pre>
+<h3 id="6-pathway-tools-version-220-2018">6. Pathway Tools version 22.0 (2018)</h3>
+<pre><code class="language-bash"># Description
+users can interactively explore, visualize and edit different components
+network can be visualized using Cellular Overview diagrams
+experimental data like gene expression can be color-mapped based on expression levels
+
+# reference
+DOI: https://doi.org/10.1093/bib/bbv079
+</code></pre>
+<h3 id="7-merlin-version-38-2018-flexible">7. Merlin version 3.8 (2018) flexible</h3>
+<pre><code class="language-bash">java application based on the KEGG database
+re-annotation of genomes through the online service of BLAST (EBI) or HMMER
+flexible adjust parameters (expected value threshold and maximum number) of annotation algorithms
+the interface enables comparing gene function agreement between annotation and UniProt
+
+# reference
+DOI: https://doi.org/10.1093/nar/gkv294
+</code></pre>
+<p><strong>Table 1 List of selected genome-scale metabolic reconstruction tools and their main features</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Reconstruction tool</th>
+<th style="text-align:left">Mapping method</th>
+<th style="text-align:left">Reactions are inherited from</th>
+<th style="text-align:left">Associated databases</th>
+<th style="text-align:left">Version</th>
+<th style="text-align:left">Type of software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">AuReMe</td>
+<td style="text-align:left">Pantograph (Inparanoid and OrthoMCL)</td>
+<td style="text-align:left">Template model(s)</td>
+<td style="text-align:left">BIGG-MetaCyc</td>
+<td style="text-align:left">1.2.4</td>
+<td style="text-align:left">Command line</td>
+</tr>
+<tr>
+<td style="text-align:left">CarveMe</td>
+<td style="text-align:left">Diamond, eggNOG-mappera</td>
+<td style="text-align:left">Template model</td>
+<td style="text-align:left">BIGG</td>
+<td style="text-align:left">1.2.1</td>
+<td style="text-align:left">Command line</td>
+</tr>
+<tr>
+<td style="text-align:left">Merlin</td>
+<td style="text-align:left">Mapping from annotation with BLAST or HMMER</td>
+<td style="text-align:left">Database</td>
+<td style="text-align:left">KEGG</td>
+<td style="text-align:left">3.8</td>
+<td style="text-align:left">Standalone interface</td>
+</tr>
+<tr>
+<td style="text-align:left">MetaDraft</td>
+<td style="text-align:left">Autograph (Inparanoid)</td>
+<td style="text-align:left">Template model(s)</td>
+<td style="text-align:left">BIGG</td>
+<td style="text-align:left">0.9.2</td>
+<td style="text-align:left">Standalone interface</td>
+</tr>
+<tr>
+<td style="text-align:left">ModelSEED</td>
+<td style="text-align:left">Annotation ontology map from RAST data</td>
+<td style="text-align:left">Template model</td>
+<td style="text-align:left">ModelSEED</td>
+<td style="text-align:left">2.2–2.4</td>
+<td style="text-align:left">Online service</td>
+</tr>
+<tr>
+<td style="text-align:left">Pathway Tools</td>
+<td style="text-align:left">Pathologic</td>
+<td style="text-align:left">Database</td>
+<td style="text-align:left">MetaCyc</td>
+<td style="text-align:left">22.0</td>
+<td style="text-align:left">Standalone interface</td>
+</tr>
+<tr>
+<td style="text-align:left">RAVEN</td>
+<td style="text-align:left">Autograph-type method from BLASTP and Bidirectional BLASTPb</td>
+<td style="text-align:left">Database- Template model(s)</td>
+<td style="text-align:left">KEGG-MetaCyc</td>
+<td style="text-align:left">2.0.1</td>
+<td style="text-align:left">Command line</td>
+</tr>
+</tbody>
+</table>
+<p>Reference: Mendoza SN, Olivier BG, Molenaar D, Teusink B. A systematic assessment of current genome-scale metabolic reconstruction tools. Genome Biol. 2019 Aug 7;20(1):158. doi: 10.1186/s13059-019-1769-1. PMID: 31391098; PMCID: PMC6685185.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[肖宾简历]]></title>
+        <id>https://xiaobin-phd.github.io/post/肖宾简历/</id>
+        <link href="https://xiaobin-phd.github.io/post/肖宾简历/">
+        </link>
+        <updated>2024-06-17T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="基本信息"><strong>基本信息</strong></h2>
+<p><strong>姓名</strong>: 肖宾                         | <strong>性别</strong>: 男<br>
+<strong>联系电话</strong>: 185-7164-xxxx | <strong>邮箱</strong>: xiaobin-phd@gmail.com</p>
+<h2 id="教育背景"><strong>教育背景</strong></h2>
+<ul>
+<li><strong>华中农业大学（211）</strong> 水产动物医学 | 硕士 (2019.09 - 2022.06)</li>
+<li>连续三年获得研究生奖学金一等奖，并以第一作者发表 SCI 论文一篇。</li>
+<li><strong>华中农业大学（211）</strong> 水产养殖学 | 本科 (2015.09 - 2019.06)
+<ul>
+<li>获得“三好学生”、“优秀团员”及“优秀部长”等荣誉。</li>
+</ul>
+</li>
+</ul>
+<h2 id="工作经历"><strong>工作经历</strong></h2>
+<ul>
+<li><strong>华大智造科技有限公司</strong> 生信分析工程师 (2022.07 - 2023.07)
+<ul>
+<li>负责测序仪等相关的技术支持，NGS 数据的问题排查，结果报告的撰写及生物学意义解读。</li>
+</ul>
+</li>
+</ul>
+<h2 id="项目经历"><strong>项目经历</strong></h2>
+<h3 id="粘孢子虫毒液相关基因的多样性-进化研究"><strong>粘孢子虫毒液相关基因的多样性、进化研究</strong></h3>
+<ul>
+<li><strong>转录组组装</strong>: 基于 NGS 测序数据，使用 Trimmomatic 和 Trinity 进行转录组的过滤和从头组装</li>
+<li><strong>毒液基因挖掘</strong>: 基于双向最佳比对（RBBH）原则，使用 BLAST 及 HMMER 挖掘粘体动物毒液基因</li>
+<li><strong>比较基因组学分析</strong>: 使用 OrthoFinder 寻找单拷贝直系同源基因，并进行序列比对、构建系统发育树；使用 PAML 和 HyPhy 分析毒液基因选择压力，探究其进化模式</li>
+</ul>
+<h3 id="mh-kunitz-蛋白的比较基因组研究"><strong>MH-Kunitz 蛋白的比较基因组研究</strong></h3>
+<ul>
+<li><strong>序列收集与筛选</strong>: 通过 venom zone 毒液数据库，筛选得到 113 条 Kunitz 蛋白非冗余序列，探究生物界中 Kunitz 蛋白的分类学分布、序列多样性和起源演化</li>
+<li><strong>蛋白结构域分析</strong>: 使用 NCBI 的保守结构域搜寻工具分析 MH-Kunitz 结构，并结合序列比对，发现粘体动物的 MH-Kunitz 中发生了 KU 结构域加倍事件</li>
+<li><strong>蛋白质三维结构预测与分子对接</strong>: 使用 AlphaFold2 预测 MH-Kunitz 的三维结构，并使用 Pymol 进行分子叠合。通过 ZDOCK 进行分子对接，发现 MH-Kunitz 可能具有胰蛋白酶抑制剂功能</li>
+</ul>
+<h3 id="粘体动物内寄生适应机制研究"><strong>粘体动物内寄生适应机制研究</strong></h3>
+<ul>
+<li><strong>基因组组装</strong>: 基于 NGS 和 SMRT 测序数据，使用 SOAPdenovo 和 FALCON 组装洪湖碘泡虫的基因组</li>
+<li><strong>基因组注释</strong>: 使用 BRAKER、MAKER、PASA 等软件进行基因组结构注释</li>
+<li><strong>基因获得与缺失分析</strong>: 利用双向 BLASTP 方法，检测 5 种粘体动物种发育信号通路、神经系统、肌肉分化和先天免疫等基因，分析粘体动物基因的扩张与收缩情况</li>
+</ul>
+<h3 id="食蟹猴脑组织的单细胞转录组分析"><strong>食蟹猴脑组织的单细胞转录组分析</strong></h3>
+<ul>
+<li>使用 DNBelab C 系列套装构建食蟹猴脑组织的单细胞转录组文库，通过 DNBSEQ 平台开展 PE100 测序</li>
+<li>使用 STAR 与食蟹猴基因组比对，并通过 sambamba 进行序列排序，再用 PISA 生成细胞与基因 UMI 矩阵</li>
+</ul>
+<h2 id="科研成果"><strong>科研成果</strong></h2>
+<ol>
+<li><strong>Bin Xiao</strong><sup>#</sup>, Qingxiang Guo, Yanhua Zhai and Zemao Gu*. Transcriptomic insights into the diversity and evolution of Myxozoa (Cnidaria, Endocnidozoa) toxin-like proteins. <em>Marine Drugs</em>, 2022, 20(5): 291. (Q2, IF = 6.1)</li>
+<li>Qingxiang Guo<sup>#</sup>, Stephen D. Atkinson<sup>#</sup>, <strong>Bin Xiao</strong>, Yanhua Zhai, Jerri L. Bartholomew, Zemao Gu*. A myxozoan genome reveals mosaic evolution in the parasite group. <em>BMC BIOLOGY</em>, 2022, 20(1): 1-19. (Q2, IF = 7.4)</li>
+</ol>
+<h2 id="其它"><strong>其它</strong></h2>
+<ul>
+<li><strong>专业技能</strong>: 熟练使用 Linux 操作系统，熟悉 Python、R 编程语言，掌握分子生物学实验</li>
+<li><strong>其他技能</strong>: Office，数据分析，论文撰写</li>
+<li><strong>语言</strong>: CET-6，无障碍阅读英文文献</li>
+</ul>
+]]></content>
+    </entry>
+</feed>

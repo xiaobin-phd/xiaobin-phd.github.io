@@ -1,0 +1,328 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>阿宾的BLOG</title>
+<link rel="shortcut icon" href="https://xiaobin-phd.github.io/favicon.ico" />
+<link
+  href="https://unpkg.com/remixicon@2.2.0/fonts/remixicon.css"
+  rel="stylesheet" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/animate.css@3.7.2/animate.min.css" />
+<link
+  rel="stylesheet"
+  href="https://xiaobin-phd.github.io/media/css/tailwind.css" />
+<link rel="stylesheet" href="https://xiaobin-phd.github.io/styles/main.css" />
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="阿宾的BLOG - Atom Feed"
+  href="https://xiaobin-phd.github.io/atom.xml" />
+
+
+
+    <meta name="description" content="" />
+  </head>
+  <body>
+    <div class="antialiased flex flex-col min-h-screen" id="app">
+      <div
+  class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300"
+  :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div
+      class="w-8 h-8 flex justify-center items-center rounded-full md:hidden"
+      @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav
+    class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block"
+    :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+    <a
+      href="/"
+      target=""
+      class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      首页
+    </a>
+    
+    <a
+      href="/archives"
+      target=""
+      class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      归档
+    </a>
+    
+    <a
+      href="/tags"
+      target=""
+      class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      标签
+    </a>
+    
+    <a
+      href="/post/about"
+      target=""
+      class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      关于
+    </a>
+    
+    <a
+      href="https://xiaobin-phd.github.io/atom.xml"
+      target="_blank"
+      class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+
+      <div
+        class="max-w-4xl w-full mx-auto ">
+         <header
+  class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
+  <div class="flex-1 order-2 md:order-1 md:pr-16">
+    <div class="text-4xl font-bold text-center md:text-left">
+      阿宾的BLOG
+    </div>
+    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
+      
+    </div>
+     
+    <div class="mt-8 flex items-center">
+      
+      <div class="text-gray-500 mr-2">在这里找到我吧！</div>
+           
+      <a
+        href="mailto:xiaobin-phd@gmail.com"
+        target="_blank"
+        class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+        <i class="ri-mail-line"></i>
+      </a>
+          
+      <a
+        href="https://github.com/xiaobin-phd"
+        target="_blank"
+        class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+        <i class="ri-github-line"></i>
+      </a>
+              
+      <a
+        href="https://www.zhihu.com/people/bin-blog"
+        target="_blank"
+        class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+        <i class="ri-zhihu-line"></i>
+      </a>
+                    
+    </div>
+    
+  </div>
+  <div
+    class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
+    <img
+      class="rounded-full object-cover"
+      src="https://xiaobin-phd.github.io/images/avatar.png?v=1730597578109"
+      alt="阿宾的BLOG"
+      width="100%"
+      height="100%" />
+  </div>
+</header>
+ 
+
+        <div
+          class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+          
+<div
+  class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  
+  <i
+    class="ri-star-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+  
+  <div class="flex-1 order-2 md:order-1">
+    <h2 class="text-2xl font-semibold mb-4">
+      <a
+        href="https://xiaobin-phd.github.io/post/肖宾简历/"
+        class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+        肖宾简历
+      </a>
+    </h2>
+    <div class="mb-4 text-xs text-gray-500">2024-06-18</div>
+    <div class="mb-4 text-gray-500 dark:text-gray-300">
+      基本信息
+姓名: 肖宾                         | 性别: 男
+联系电话: 185-7164-xxxx | 邮箱: xiaobin-phd@gmail.com
+教育背景
+
+华中农业大学（211） 水产动物医学 | 硕...
+    </div>
+    <a href="https://xiaobin-phd.github.io/post/肖宾简历/" class="btn">
+      Read more
+    </a>
+  </div>
+  
+  <img
+    class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32"
+    loading="lazy"
+    src="https://xiaobin-phd.github.io/post-images/肖宾简历.jpg"
+    alt="肖宾简历" />
+  
+</div>
+
+<div
+  class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  
+  <div class="flex-1 order-2 md:order-1">
+    <h2 class="text-2xl font-semibold mb-4">
+      <a
+        href="https://xiaobin-phd.github.io/post/1102-hui-yi-zong-jie/"
+        class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+        1102会议总结
+      </a>
+    </h2>
+    <div class="mb-4 text-xs text-gray-500">2024-11-03</div>
+    <div class="mb-4 text-gray-500 dark:text-gray-300">
+      1、会议概括
+近期，实验室出现了工作态度不积极、工作执行不到位、个人奋斗意识不强以及试剂耗材浪费等问题。对此，申老师对实验室成员进行了批评，并明确提出了整改意见。要求各位成员积极开展自查自纠，务必采取有效措施，切实改变当前状况，以提升实验室...
+    </div>
+    <a href="https://xiaobin-phd.github.io/post/1102-hui-yi-zong-jie/" class="btn">
+      Read more
+    </a>
+  </div>
+  
+</div>
+
+<div
+  class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  
+  <div class="flex-1 order-2 md:order-1">
+    <h2 class="text-2xl font-semibold mb-4">
+      <a
+        href="https://xiaobin-phd.github.io/post/dai-xie-shu-ju-ku-tuo-zhan/"
+        class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+        代谢数据库拓展
+      </a>
+    </h2>
+    <div class="mb-4 text-xs text-gray-500">2024-09-17</div>
+    <div class="mb-4 text-gray-500 dark:text-gray-300">
+      代谢相关数据库拓展
+目前已完成了初步注释，使用eggnog数据库，得到3964条基因（带有EC号）。
+后续工作分为两个步骤：1. 对初步结果进行手动验证，有的基因可能与代谢关系不那么直接，可适当删除。2. 查阅文献，拓展数据库进行注释，与初...
+    </div>
+    <a href="https://xiaobin-phd.github.io/post/dai-xie-shu-ju-ku-tuo-zhan/" class="btn">
+      Read more
+    </a>
+  </div>
+  
+</div>
+
+<div
+  class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  
+  <div class="flex-1 order-2 md:order-1">
+    <h2 class="text-2xl font-semibold mb-4">
+      <a
+        href="https://xiaobin-phd.github.io/post/zhu-dai-xie-xiang-guan-ji-yin-zhu-shi/"
+        class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+        猪代谢相关基因注释
+      </a>
+    </h2>
+    <div class="mb-4 text-xs text-gray-500">2024-09-09</div>
+    <div class="mb-4 text-gray-500 dark:text-gray-300">
+      1、参考基因组下载
+基因组选择：Genome assembly Sscrofa11.1 （官方参考基因组，杜洛克雌猪）
+wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003...
+    </div>
+    <a href="https://xiaobin-phd.github.io/post/zhu-dai-xie-xiang-guan-ji-yin-zhu-shi/" class="btn">
+      Read more
+    </a>
+  </div>
+  
+</div>
+
+<div
+  class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  
+  <div class="flex-1 order-2 md:order-1">
+    <h2 class="text-2xl font-semibold mb-4">
+      <a
+        href="https://xiaobin-phd.github.io/post/20240831-bosstalk/"
+        class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+        20240831-BossTalk
+      </a>
+    </h2>
+    <div class="mb-4 text-xs text-gray-500">2024-08-31</div>
+    <div class="mb-4 text-gray-500 dark:text-gray-300">
+      前天半夜接收了boss的文献，加急阅读后，今天与之探讨。内容主要为后续开展的研究方向，整体和之前所定的不变，大方向还是探究弓形虫和宿主的代谢互作机制，阐明寄生虫依赖的核心代谢通路，探索寄生虫为什么要”寄生“。在此基础上进行了细化，分为两条路...
+    </div>
+    <a href="https://xiaobin-phd.github.io/post/20240831-bosstalk/" class="btn">
+      Read more
+    </a>
+  </div>
+  
+</div>
+
+<div
+  class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  
+  <div class="flex-1 order-2 md:order-1">
+    <h2 class="text-2xl font-semibold mb-4">
+      <a
+        href="https://xiaobin-phd.github.io/post/shi-yan-xiang-guan-gai-nian-qanda/"
+        class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+        实验相关概念Q&amp;A
+      </a>
+    </h2>
+    <div class="mb-4 text-xs text-gray-500">2024-06-20</div>
+    <div class="mb-4 text-gray-500 dark:text-gray-300">
+      1、染色质重塑因子
+染色质重塑因子（chromatin remodeling factors）是调控染色质结构和基因表达的重要蛋白质复合物。它们通过改变核小体（由DNA缠绕组装的结构）的位置、构象或组成，来调控基因的转录、复制、修复等过程。...
+    </div>
+    <a href="https://xiaobin-phd.github.io/post/shi-yan-xiang-guan-gai-nian-qanda/" class="btn">
+      Read more
+    </a>
+  </div>
+  
+</div>
+
+<div
+  class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+  
+  <div class="flex-1 order-2 md:order-1">
+    <h2 class="text-2xl font-semibold mb-4">
+      <a
+        href="https://xiaobin-phd.github.io/post/a-brief-compasison-of-gsmms-reconstruction/"
+        class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+        A brief compasison of GSMMs reconstruction
+      </a>
+    </h2>
+    <div class="mb-4 text-xs text-gray-500">2024-06-18</div>
+    <div class="mb-4 text-gray-500 dark:text-gray-300">
+      1. AuReMe (Automatic Reconstruction of Metabolic Models，2018)
+# Description
+good traceability of the whole reconstructio...
+    </div>
+    <a href="https://xiaobin-phd.github.io/post/a-brief-compasison-of-gsmms-reconstruction/" class="btn">
+      Read more
+    </a>
+  </div>
+  
+</div>
+
+
+        </div>
+
+        
+ <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  The best way to predict the future is to create it！
+</footer>
+
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@2.7.14/dist/vue.min.js"></script>
+    <script src="https://xiaobin-phd.github.io/media/scripts/main.js"></script>
+  </body>
+  
+</html>
